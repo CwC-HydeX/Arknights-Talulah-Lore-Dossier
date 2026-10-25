@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>灰烬、黑蛇与不灭的薪火：塔露拉·雅特利亚斯全考据档案</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 15mm 14mm 15mm;
+  }
+  @page :first {
+    margin: 0;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1ea;
+    color: #1c1e24;
+    font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.72;
+  }
+  @media screen {
+    body {
+      max-width: 210mm;
+      margin: 0 auto;
+      box-shadow: 0 0 30px rgba(0,0,0,0.25);
+    }
+    .content-wrapper {
+      padding: 14mm 15mm;
+    }
+  }
+  h1, h2, h3, h4 {
+    margin: 0;
+    font-family: "SimSun", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "Microsoft YaHei", serif;
+  }
+  p {
+    margin: 0 0 10px 0;
+    text-align: justify;
+  }
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+  .avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* ================= COVER PAGE ================= */
+  .cover-page {
+    width: 210mm;
+    height: 297mm;
+    background: linear-gradient(155deg, #0b0d13 0%, #141822 50%, #1e1314 100%);
+    color: #f2ece1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14mm 15mm 12mm 15mm;
+    page-break-after: always;
+    break-after: page;
+  }
+  .cover-bg-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(circle at 80% 25%, rgba(214, 69, 53, 0.18) 0%, transparent 55%),
+                      radial-gradient(circle at 20% 75%, rgba(201, 164, 92, 0.14) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .cover-grid-lines {
+    position: absolute;
+    top: 8mm; left: 8mm; right: 8mm; bottom: 8mm;
+    border: 1px solid rgba(201, 164, 92, 0.35);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .cover-grid-lines::before {
+    content: "";
+    position: absolute;
+    top: 3px; left: 3px; right: 3px; bottom: 3px;
+    border: 1px solid rgba(201, 164, 92, 0.15);
+  }
+  .cover-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .cover-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #c9a45c;
+    padding-bottom: 8px;
+    font-size: 8.5pt;
+    letter-spacing: 1.5px;
+    color: #c9a45c;
+    font-family: Consolas, "Courier New", monospace;
+  }
+  .cover-badge {
+    background: #d64535;
+    color: #fff;
+    padding: 2px 8px;
+    font-weight: bold;
+    border-radius: 2px;
+    letter-spacing: 1px;
+  }
+  .cover-title-block {
+    margin-top: 6px;
+  }
+  .cover-sub-en {
+    font-size: 9pt;
+    letter-spacing: 3px;
+    color: #c9a45c;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    font-family: Consolas, monospace;
+  }
+  .cover-main-title {
+    font-size: 25pt;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+    line-height: 1.22;
+    text-shadow: 0 2px 12px rgba(214, 69, 53, 0.45);
+  }
+  .cover-main-title span {
+    color: #e85d4a;
+  }
+  .cover-subtitle {
+    margin-top: 8px;
+    font-size: 10.2pt;
+    color: #d5cfc2;
+    line-height: 1.52;
+    border-left: 3px solid #d64535;
+    padding-left: 10px;
+  }
+  .cover-portraits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+    margin: 8px 0;
+  }
+  .cover-portrait-card {
+    background: rgba(18, 22, 31, 0.88);
+    border: 1px solid rgba(201, 164, 92, 0.45);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .cover-portrait-img-wrap {
+    height: 76mm;
+    background: radial-gradient(circle at 50% 35%, rgba(201,164,92,0.18), rgba(10,12,18,0.95));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .cover-portrait-img-wrap img {
+    width: 115%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 14%;
+  }
+  .cover-portrait-stage {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: rgba(11, 13, 19, 0.88);
+    border: 1px solid #c9a45c;
+    color: #c9a45c;
+    font-size: 7.5pt;
+    padding: 1px 6px;
+    font-family: Consolas, monospace;
+  }
+  .cover-portrait-info {
+    padding: 7px 8px;
+    border-top: 1px solid rgba(201, 164, 92, 0.3);
+    background: rgba(12, 14, 20, 0.95);
+  }
+  .cover-portrait-title {
+    font-size: 9.5pt;
+    font-weight: bold;
+    color: #f5efe6;
+    margin-bottom: 3px;
+  }
+  .cover-portrait-desc {
+    font-size: 8pt;
+    color: #b5afa2;
+    line-height: 1.4;
+  }
+  .cover-cg-strip {
+    display: grid;
+    grid-template-columns: 74mm 1fr;
+    gap: 12px;
+    background: rgba(20, 24, 34, 0.85);
+    border: 1px solid rgba(201, 164, 92, 0.4);
+    padding: 9px;
+    border-radius: 4px;
+    align-items: center;
+  }
+  .cover-cg-strip img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .cover-quote-box {
+    padding: 2px 6px;
+  }
+  .cover-quote-text {
+    font-size: 9.5pt;
+    font-style: italic;
+    color: #f0e6d2;
+    line-height: 1.55;
+    margin-bottom: 5px;
+  }
+  .cover-quote-cite {
+    font-size: 8pt;
+    color: #c9a45c;
+    text-align: right;
+  }
+  .cover-meta-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+    background: rgba(14, 17, 24, 0.9);
+    border: 1px solid rgba(201, 164, 92, 0.45);
+  }
+  .cover-meta-table th {
+    background: rgba(201, 164, 92, 0.18);
+    color: #c9a45c;
+    text-align: left;
+    padding: 5px 8px;
+    border: 1px solid rgba(201, 164, 92, 0.3);
+    width: 15%;
+    font-weight: bold;
+  }
+  .cover-meta-table td {
+    padding: 5px 8px;
+    color: #e2ddd2;
+    border: 1px solid rgba(201, 164, 92, 0.25);
+    width: 35%;
+  }
+
+  /* ================= SECTION HEADERS & BANNERS ================= */
+  .chapter-banner {
+    background: linear-gradient(135deg, #10131c 0%, #1c202e 65%, #2b1818 100%);
+    color: #f4efe6;
+    padding: 11px 16px;
+    border-left: 6px solid #d64535;
+    border-bottom: 2px solid #c9a45c;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 0 5px 5px 0;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .chapter-banner-left .ch-tag {
+    font-size: 8pt;
+    color: #c9a45c;
+    letter-spacing: 1.5px;
+    font-family: Consolas, monospace;
+    text-transform: uppercase;
+  }
+  .chapter-banner-left .ch-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 3px;
+  }
+  .chapter-banner-right {
+    font-size: 7.8pt;
+    color: #b8b2a6;
+    text-align: right;
+    font-family: Consolas, monospace;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  .sub-header {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #141720;
+    border-left: 4.5px solid #b83728;
+    border-bottom: 1.5px solid #c9a45c;
+    padding: 5px 0 5px 10px;
+    margin: 16px 0 10px 0;
+    background: linear-gradient(90deg, rgba(201, 164, 92, 0.18) 0%, transparent 90%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .sub-header span.stage-ref {
+    font-size: 8.2pt;
+    font-family: Consolas, monospace;
+    color: #7c2d23;
+    background: rgba(214, 69, 53, 0.12);
+    border: 1px solid rgba(214, 69, 53, 0.35);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-weight: normal;
+  }
+
+  /* ================= CARDS, CALLOUTS & QUOTES ================= */
+  .dossier-box {
+    background: #fbf9f5;
+    border: 1px solid #d6cbb9;
+    border-top: 3px solid #1c202b;
+    border-radius: 4px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+  }
+  .dossier-box-title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #8f261b;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .script-quote {
+    background: #181b24;
+    color: #ebe5d9;
+    border-left: 4.5px solid #d64535;
+    padding: 11px 15px;
+    margin: 10px 0 14px 0;
+    border-radius: 0 5px 5px 0;
+    font-size: 9.8pt;
+    line-height: 1.68;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .script-quote .speaker {
+    color: #e6b86a;
+    font-weight: bold;
+  }
+  .script-quote .cite-tag {
+    display: block;
+    text-align: right;
+    font-size: 8.2pt;
+    color: #b0a99d;
+    margin-top: 5px;
+    font-family: Consolas, monospace;
+  }
+
+  /* Grid Layouts */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  /* Wide image sidebars so CGs are 84mm wide (nearly half the page width!) and 100% uncropped */
+  .grid-cg-right {
+    display: grid;
+    grid-template-columns: 1fr 84mm;
+    gap: 14px;
+    margin-bottom: 12px;
+    align-items: center;
+  }
+  .grid-cg-left {
+    display: grid;
+    grid-template-columns: 84mm 1fr;
+    gap: 14px;
+    margin-bottom: 12px;
+    align-items: center;
+  }
+
+  /* Official CG Frame - 100% UNCROPPED FULL ASPECT RATIO */
+  .cg-card {
+    background: #12151e;
+    border: 1.5px solid #3c352a;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .cg-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .cg-caption {
+    padding: 8px 11px;
+    font-size: 8.8pt;
+    color: #e0d9cc;
+    background: #12151e;
+    border-top: 1px solid rgba(201, 164, 92, 0.4);
+    line-height: 1.5;
+  }
+  .cg-caption strong {
+    color: #e6b86a;
+  }
+
+  /* Full-width Hero CG Showcase - 100% FULL WIDTH ZERO PILLARBOX */
+  .cg-hero {
+    background: #12151e;
+    border: 1.5px solid #c9a45c;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0 14px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .cg-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .cg-hero .cg-caption {
+    padding: 9px 14px;
+    font-size: 9.2pt;
+  }
+
+  /* Character Relationship Card - Large Avatar & Comfortable Font */
+  .char-card {
+    background: #fbf9f5;
+    border: 1px solid #d4c9b4;
+    border-left: 3.5px solid #b83728;
+    border-radius: 5px;
+    padding: 8px 11px;
+    display: grid;
+    grid-template-columns: 20mm 1fr;
+    gap: 10px;
+    align-items: start;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .char-avatar {
+    width: 20mm;
+    height: 20mm;
+    border-radius: 50%;
+    border: 2px solid #b83728;
+    background: #1a1d26;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  }
+  .char-avatar img {
+    width: 115%;
+    height: 115%;
+    object-fit: cover;
+    object-position: center 15%;
+  }
+  .char-meta-name {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #161922;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+    border-bottom: 1px dashed #dcd3c2;
+    padding-bottom: 2px;
+  }
+  .char-role-badge {
+    font-size: 7.6pt;
+    padding: 1px 6px;
+    border-radius: 3px;
+    background: #e9e2d4;
+    color: #5c4b32;
+    font-weight: normal;
+  }
+  .char-meta-desc {
+    font-size: 9pt;
+    color: #2c2f36;
+    line-height: 1.48;
+    text-align: justify;
+  }
+
+  /* Tables */
+  .lore-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.4pt;
+    margin-bottom: 12px;
+    background: #fdfbf7;
+  }
+  .lore-table tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .lore-table th {
+    background: #191d28;
+    color: #e6c687;
+    padding: 7px 9px;
+    border: 1px solid #383d4d;
+    text-align: left;
+    font-weight: bold;
+    font-size: 9.5pt;
+  }
+  .lore-table td {
+    padding: 7px 9px;
+    border: 1px solid #d4c9b4;
+    vertical-align: top;
+    line-height: 1.56;
+  }
+  .lore-table tr:nth-child(even) td {
+    background: #f5f0e6;
+  }
+  .year-pill {
+    display: inline-block;
+    background: #8f261b;
+    color: #fff;
+    font-family: Consolas, monospace;
+    font-size: 8.2pt;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+  .stage-pill {
+    display: inline-block;
+    background: #1c202b;
+    color: #e6c687;
+    font-family: Consolas, monospace;
+    font-size: 8pt;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  /* Footer marker */
+  .section-footer {
+    margin-top: 12px;
+    padding-top: 5px;
+    border-top: 1px dashed #c4b8a3;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+    color: #6e685f;
+    font-family: Consolas, monospace;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: FULL-BLEED COVER PAGE ==================== -->
+<div class="cover-page">
+  <div class="cover-bg-overlay"></div>
+  <div class="cover-grid-lines"></div>
+  <div class="cover-content">
+    <div>
+      <div class="cover-top-bar">
+        <span>RHODES ISLAND ARCHIVE // TERRA: A JOURNEY SPECIAL DOSSIER</span>
+        <span class="cover-badge">CLASSIFIED // LEVEL-S</span>
+        <span>FILE NO. RI-TLL-1068-1100</span>
+      </div>
+      <div class="cover-title-block">
+        <div class="cover-sub-en">ARKNIGHTS OFFICIAL LORE &amp; NARRATIVE RECONSTRUCTION MANUAL</div>
+        <h1 class="cover-main-title">灰烬、黑蛇与<span>不灭的薪火</span><br>塔露拉·雅特利亚斯全考据档案</h1>
+        <div class="cover-subtitle">
+          从龙门德拉科遗孤、冻原理想主义斗士、被“不死的黑蛇”寄生的切城暴君，到麦田里的赎罪者与重返北原的破局者——<br>
+          基于《明日方舟》主线第0—17章官方剧本、《大地巡旅》设定集与罗德岛调查报告的系统性人物深度考据手册
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-portraits-grid">
+      <div class="cover-portrait-card">
+        <div class="cover-portrait-img-wrap">
+          <span class="cover-portrait-stage">PHASE I · 1086-1095</span>
+          <img src="./assets/talulah_fighter.png" alt="早期斗士塔露拉">
+        </div>
+        <div class="cover-portrait-info">
+          <div class="cover-portrait-title">【斗士】冻原微光</div>
+          <div class="cover-portrait-desc">刺源石弑养父科西切，在北原创立早期整合运动，守护受迫害感染者的年轻领袖。</div>
+        </div>
+      </div>
+      <div class="cover-portrait-card">
+        <div class="cover-portrait-img-wrap">
+          <span class="cover-portrait-stage">PHASE II · 1096-1097</span>
+          <img src="./assets/talulah_act1.png" alt="暴君塔露拉">
+        </div>
+        <div class="cover-portrait-info">
+          <div class="cover-portrait-title">【暴君】怒号光明</div>
+          <div class="cover-portrait-desc">历经阿丽娜之死与粮仓惨案，因绝望与仇恨触发“黑蛇”夺舍契约，掀动切城—龙门事变。</div>
+        </div>
+      </div>
+      <div class="cover-portrait-card">
+        <div class="cover-portrait-img-wrap">
+          <span class="cover-portrait-stage">PHASE III · 1097-1098</span>
+          <img src="./assets/talulah_act3.png" alt="囚徒与觉醒者塔露拉">
+        </div>
+        <div class="cover-portrait-info">
+          <div class="cover-portrait-title">【觉醒】背负枷锁</div>
+          <div class="cover-portrait-desc">双剑斩蛇后拒绝推卸罪责；越狱后北上击败黑蛇传人科谢尔娜，南下伦蒂尼姆对决爱布拉娜。</div>
+        </div>
+      </div>
+      <div class="cover-portrait-card">
+        <div class="cover-portrait-img-wrap">
+          <span class="cover-portrait-stage">PHASE IV · 1100+</span>
+          <img src="./assets/talulah_ep17.png" alt="再赴北原塔露拉">
+        </div>
+        <div class="cover-portrait-info">
+          <div class="cover-portrait-title">【薪火】麦田与北原</div>
+          <div class="cover-portrait-desc">在乌萨斯边境开荒种麦，褪去救世主光环成为普通同行者，再度北上彻底清算黑蛇遗产。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-cg-strip">
+      <img src="./assets/cg_talulah_alina.png" alt="塔露拉与阿丽娜">
+      <div class="cover-quote-box">
+        <div class="cover-quote-text">
+          “整合运动应该如大地上的冰川一般，宏伟，坚硬，在撞击中毁灭，或者在撞击后迎来新生。哪怕你被太阳融化，塔露拉，乌萨斯的冬天很快就会再临……这片大地上的一切不公，要有人去尽数消灭。”
+        </div>
+        <div class="cover-quote-cite">—— 塔露拉与阿丽娜于乌萨斯北原，主线第八章《怒号光明》R8-1 / JT8-3</div>
+      </div>
+    </div>
+
+    <table class="cover-meta-table">
+      <tr>
+        <th>真实姓名</th>
+        <td>塔露拉·雅特利亚斯 (Talulah Artorius)</td>
+        <th>种族血统</th>
+        <td>德拉科 (维多利亚红龙王室) × 神民 (炎国真龙) 混血</td>
+      </tr>
+      <tr>
+        <th>出生日期</th>
+        <td>泰拉历 1068年1月9日（龙门）</td>
+        <th>家庭谱系</th>
+        <td>父：爱德华·雅特利亚斯｜母：魏氏｜舅：魏彦吾｜妹：陈晖洁</td>
+      </tr>
+      <tr>
+        <th>源石技艺</th>
+        <td>极高温火焰 / 日珥引爆 / 黑蛇政略意识共鸣</td>
+        <th>矿石病状态</th>
+        <td>1086年（18岁）主动将源石碎片刺入左臂成为感染者</td>
+      </tr>
+      <tr>
+        <th>档案结构</th>
+        <td>00.导读 · 01.身世 · 02.关系网 · 03.性格与黑蛇解构 · 04.时间轴 · 05.全剧情纪实</td>
+        <th>图像来源声明</th>
+        <td>100% 采用《明日方舟》游戏内官方立绘与主线剧情 CG（高清完整比例·零裁切）</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="content-wrapper">
+<!-- ==================== SECTION 00 & SECTION 01 ==================== -->
+<div class="chapter-banner">
+  <div class="chapter-banner-left">
+    <div class="ch-tag">SECTION 00 // EXECUTIVE BRIEFING FOR NEW READERS</div>
+    <h2 class="ch-title">导读：三分钟读懂塔露拉——她是谁、经历了什么、为何走到这一步？</h2>
+  </div>
+  <div class="chapter-banner-right">
+    ARCHIVE REF: INTRO-TLL<br>DUAL-TIMELINE &amp; CHARACTER FOIL
+  </div>
+</div>
+
+<div class="dossier-box avoid-break">
+  <div class="dossier-box-title">◆ 致未完整阅读过《明日方舟》主线剧情读者的核心导览</div>
+  <p style="margin-bottom:0;">
+    在《明日方舟》宏大的泰拉世界观中，<strong>塔露拉（Talulah）</strong>是第一部“切尔诺伯格—龙门危机篇”（第0—8章）的最终首领，也是贯穿第二部“维多利亚篇”（第9—14章）与第三部“乌萨斯/极北篇”（第16—17章）的核心灵魂人物。由于游戏在第八章《怒号光明》中采用了复杂的<strong>双线交叉叙事（R8 过去回忆线 vs. M8 现在决战线）</strong>，且涉及横跨四十余年的多国政治博弈，初次接触的读者往往容易产生两大疑问：<em>“她究竟是真心为了感染者，还是纯粹残暴的反派？”</em>以及<em>“她后来变坏到底是因为被黑蛇洗脑控制，还是她自己的选择？”</em>本手册结合<strong>逐句官方剧本原文</strong>与《大地巡旅》设定集，将她的命运浓缩为以下三个核心维度的解答：
+  </p>
+</div>
+
+<div class="dossier-box avoid-break" style="border-top-color: #b83728;">
+  <div class="dossier-box-title">① 她是谁？（双重王血与原罪出身）</div>
+  <p style="margin-bottom:0;">
+    维多利亚流亡德拉科（红龙）王室后裔<strong>爱德华·雅特利亚斯</strong>与龙门最高执政<strong>魏彦吾亲妹妹（魏氏）</strong>的女儿，龙门近卫局警司<strong>陈晖洁同母异父的亲姐姐</strong>。她天生继承了红龙操控超高温烈焰的血脉天赋与极具感召力的领袖人格；但父母的政治惨剧让她在9岁时便沦为乌萨斯大公爵<strong>“不死的黑蛇”科西切</strong>的人质与养女。
+  </p>
+</div>
+
+<div class="dossier-box avoid-break" style="border-top-color: #c9a45c;">
+  <div class="dossier-box-title">② 她经历了什么？（从冻原乌托邦到坠入深渊）</div>
+  <p style="margin-bottom:0;">
+    18岁那年，她为反抗养父科西切将她培养成帝国暴政工具的阴谋，主动将源石刺入左臂成为感染者并一剑刺死科西切，却在弑父瞬间被种下精神诅咒。逃往乌萨斯北原后，她与挚友<strong>阿丽娜</strong>、老将<strong>爱国者</strong>、白兔<strong>霜星</strong>建立起保护感染者的<strong>早期整合运动</strong>。然而阿丽娜被虐杀、内卫揭穿其贵族身世、以及感染者村民残杀恩人的“粮仓惨案”，彻底击碎了她的理想。
+  </p>
+</div>
+
+<div class="dossier-box avoid-break" style="border-top-color: #1c202b;">
+  <div class="dossier-box-title">③ 为何走到这一步？（非机械洗脑的“绝望共谋”与清醒后的赎罪）</div>
+  <p style="margin-bottom:0;">
+    “不死的黑蛇”并非强行抹杀宿主意识的提线木偶术，而是<strong>“只有当你自己对人性彻底绝望、因恨认同科西切时才会生效”的心理赌局</strong>。粮仓大火中，塔露拉因极度悲愤想要烧尽世间卑劣，怒火与黑蛇重合，导致自我退居深渊、黑蛇主导躯体化为切城暴君。而在第八章被陈与阿米娅唤醒后，<strong>她拒绝拿“被附身”当借口逃避罪责</strong>，戴着枷锁走上赎罪与破局之路。
+  </p>
+</div>
+
+<!-- ==================== CHAPTER 1: BLOODLINE & ORIGINS ==================== -->
+<div class="page-break"></div>
+<div class="chapter-banner">
+  <div class="chapter-banner-left">
+    <div class="ch-tag">SECTION 01 // BLOODLINE, LUNGMEN TRAGEDY &amp; URSUS CAPTIVITY (1055–1086)</div>
+    <h2 class="ch-title">第一章：身世背景——双龙血脉、龙门旧梦与乌萨斯囚笼</h2>
+  </div>
+  <div class="chapter-banner-right">
+    STAGES: 7-20 / R8-1 / JT8-2<br>TERRA YEAR 1055 — 1086
+  </div>
+</div>
+
+<div class="sub-header">
+  <span>1.1 雅特利亚斯与龙门魏氏的政治悲剧（1055—1068）</span>
+  <span class="stage-ref">考据来源：《大地巡旅》/ 7-20 / JT8-2</span>
+</div>
+
+<p>
+  塔露拉的身世横跨泰拉三大超级强权——<strong>维多利亚、大炎（龙门）与乌萨斯</strong>。其生父<strong>爱德华·雅特利亚斯（Edward Artorius）</strong>是维多利亚红龙王室“德拉科（Draco）”直系后裔。在阿斯兰王室排挤下，年轻的爱德华游历至大炎边陲移动城市<strong>龙门</strong>，与青年<strong>魏彦吾</strong>结为生死之交，并与魏彦吾胞妹<strong>魏氏</strong>相恋。<strong>1055年</strong>，魏彦吾与爱德华联手击败渗透龙门的乌萨斯大公爵<strong>科西切</strong>，夺回龙门控制权。
+</p>
+<p>
+  然而，爱德华敏感的外国王室血统加上科西切撤退前散播的流言，引起大炎朝廷（真龙与天师府）的高度忌惮。<strong>1067年</strong>，大炎禁军向魏彦吾下达最后通牒：交出爱德华，否则武力清洗龙门。为保龙门百万市民，魏彦吾含恨设局逼死（斩杀）了妹夫爱德华。当时已怀有身孕的魏氏被迫改嫁陈氏。<strong>1068年1月9日</strong>，爱德华遗腹女<strong>塔露拉</strong>诞生；数年后，同母异父的妹妹<strong>陈晖洁（Ch'en）</strong>出生。
+</p>
+
+<div class="grid-2 avoid-break">
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_dragon_sisters.png" alt="童年塔露拉与陈晖洁合影">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_8_42]：龙门姐妹旧影（JT8-2）</strong><br>
+      右侧为始终护着妹妹的幼年塔露拉（银发德拉科），左侧为幼年陈晖洁（蓝发神民）。在压抑的陈宅中，姐姐是幼年陈晖洁唯一的温暖与庇护者。
+    </div>
+  </div>
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_abduction.png" alt="科西切掳走幼年塔露拉">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_7_23]：黑雪中的掳掠（7-20 · 1077年）</strong><br>
+      9岁的塔露拉被乌萨斯大公爵科西切牵入阴影。为防舅舅魏彦吾、母亲与幼妹陈晖洁遭受战火波及，早熟的她咬牙没有回头呼救。
+    </div>
+  </div>
+</div>
+
+<div class="script-quote">
+  <span class="speaker">【剧情原文·塔露拉童年记忆】</span>
+  “老女人，不许再打晖洁！她才多大一点！你有什么不满，冲着我来，冲着魏彦吾去！你凭什么拿晖洁撒气！……晖洁，不要哭，把这个娃娃藏在你的床底下，不要让其他人看见，这个是属于你的，他们抢不走……”
+  <span class="cite-tag">—— 主线第八章《JT8-2 直到冰雪消融》塔露拉意识深处的龙门童年闪回</span>
+</div>
+
+<div class="sub-header">
+  <span>1.2 乌萨斯九年宫廷洗脑与 1086 年自刺源石弑父之局</span>
+  <span class="stage-ref">考据来源：7-20 / R8-1《昨日重现》/ END8-1</span>
+</div>
+
+<p>
+  <strong>1077年</strong>，科西切利用爱德华之死的真相与9岁塔露拉的身世作为政治筹码讹诈魏彦吾，将塔露拉带回乌萨斯公爵领。在随后的<strong>九年（1077—1086）</strong>里，科西切将塔露拉册封为<strong>养女与法定继承人</strong>。科西切本是一个依靠源石技艺不断更换宿主延续意识的千年“帝国扩张意志化身”。他让塔露拉饱览治国典籍，同时日复一日向她灌输极端的<strong>社会达尔文主义与人性虚无主义</strong>，逼她旁观贵族的贪婪与底层互害，企图从精神根基上将这名德拉科少女改造为下一个“不死的黑蛇”。
+</p>
+
+<p>
+  然而青年塔露拉并未变成冷血贵族，反而看清了养父玩弄人心、制造苦难的本质。<strong>1086年（18岁）</strong>，为获得足以对抗科西切古老源石技艺的爆发力，也为了彻底斩断自己“高贵公爵继承人”的退路，<strong>尚未感染矿石病的塔露拉在领民掩护下取得一枚活性源石碎片，亲手将其狠狠刺入左臂主动成为感染者</strong>，随后持剑独闯宅邸刺穿了科西切的胸膛！然而她不知道科西切的本体早已化为名为<strong>“不死的黑蛇”</strong>的意识寄生源石技艺——在她满怀愤怒挥剑弑父的瞬间，科西切将承载着自己记忆与人格模型的“精神种子”烙印进了她的脑海深处，潜伏等待她信念崩塌的那一天。
+</p>
+
+<div class="cg-hero">
+  <img src="./assets/cg_kashchey_death.png" alt="18岁塔露拉刺杀科西切">
+  <div class="cg-caption">
+    <strong>▲ 官方剧情 CG [Avg_8_1]：弑父之剑与诅咒起点（R8-1 · 1086年）</strong><br>
+    18岁的塔露拉左臂缠着主动刺入源石后的渗血绷带，在乌萨斯公爵领宫殿中一剑刺穿养父科西切的胸膛，却在弑父瞬间被种下“不死的黑蛇”精神烙印。
+  </div>
+</div>
+
+<div class="script-quote">
+  <span class="speaker">科西切：</span>“我亲爱的塔露拉，你用源石刺伤自己，让自己成为感染者，就是为了用这力量杀我？……杀了我，你就会成为我。当你对这片大地感到绝望，当你憎恨那些你曾发誓保护的蠢货时，你就会明白我才是对的。我们定下这个赌约吧——我会在你的阴影里等着你。”
+  <span class="cite-tag">—— 主线第八章《R8-1 昨日重现》18岁塔露拉刺杀养父科西切时的遗言诅咒</span>
+</div>
+
+<!-- ==================== CHAPTER 2: CHARACTER RELATIONSHIP NETWORK ==================== -->
+<div class="page-break"></div>
+<div class="chapter-banner">
+  <div class="chapter-banner-left">
+    <div class="ch-tag">SECTION 02 // FOUR-QUADRANT CHARACTER RELATIONSHIP TOPOLOGY</div>
+    <h2 class="ch-title">第二章：人物关系全景考据——命运交织的四大关系网</h2>
+  </div>
+  <div class="chapter-banner-right">
+    LUNGMEN / URSUS / REUNION / VICTORIA<br>TOTAL NODES: 16 CORE CHARACTERS
+  </div>
+</div>
+
+<p>
+  塔露拉的人生轨迹处于<strong>四大阵营与命运脉络的交汇中心</strong>：她既是<strong>龙门魏氏与维多利亚王血</strong>的遗孤，又是<strong>乌萨斯黑蛇诅咒</strong>的宿主；她亲手缔造了<strong>早期整合运动</strong>的温暖大家庭，却又在被黑蛇侵蚀后亲手将其推入深渊；最终，她在<strong>罗德岛、新整合运动与维多利亚红龙镜像（爱布拉娜）</strong>的碰撞中完成了自我救赎。下图完整呈现了围绕塔露拉展开的四维人物关系拓扑结构：
+</p>
+
+<!-- CLEAN ZERO-OVERLAP INLINE SVG RELATIONSHIP DIAGRAM -->
+<div class="dossier-box avoid-break" style="padding: 10px; background: #10131c; border: 1.5px solid #c9a45c;">
+  <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(201,164,92,0.35); padding-bottom:6px; margin-bottom:8px;">
+    <span style="color:#e6c687; font-weight:bold; font-size:10pt;">◆ 视觉图谱 01：塔露拉·雅特利亚斯核心人物关系四象限拓扑图（Official Portrait Network）</span>
+    <span style="color:#a8a296; font-size:8pt; font-family:Consolas,monospace;">蓝=血脉故土 ｜ 红=黑蛇宿敌 ｜ 绿=早期整合运动 ｜ 紫=救赎与镜像</span>
+  </div>
+
+  <svg viewBox="0 0 920 510" width="100%" style="display:block; background: radial-gradient(circle at 460px 250px, #1f2436 0%, #10131c 75%); border-radius:4px;">
+    <defs>
+      <marker id="arrow-gold" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+        <path d="M 0 1 L 10 5 L 0 9 z" fill="#c9a45c"/>
+      </marker>
+      <marker id="arrow-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+        <path d="M 0 1 L 10 5 L 0 9 z" fill="#e05242"/>
+      </marker>
+      <marker id="arrow-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+        <path d="M 0 1 L 10 5 L 0 9 z" fill="#52b788"/>
+      </marker>
+      <marker id="arrow-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+        <path d="M 0 1 L 10 5 L 0 9 z" fill="#5aa9e6"/>
+      </marker>
+      <marker id="arrow-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+        <path d="M 0 1 L 10 5 L 0 9 z" fill="#b388eb"/>
+      </marker>
+
+      <clipPath id="clip-center"><circle cx="460" cy="245" r="46"/></clipPath>
+      <clipPath id="clip-wei"><circle cx="205" cy="84" r="28"/></clipPath>
+      <clipPath id="clip-chen"><circle cx="335" cy="84" r="30"/></clipPath>
+      <clipPath id="clip-kash"><circle cx="595" cy="84" r="30"/></clipPath>
+      <clipPath id="clip-kosh"><circle cx="765" cy="84" r="28"/></clipPath>
+      <clipPath id="clip-alina"><circle cx="255" cy="276" r="30"/></clipPath>
+      <clipPath id="clip-patriot"><circle cx="105" cy="330" r="29"/></clipPath>
+      <clipPath id="clip-frost"><circle cx="220" cy="412" r="29"/></clipPath>
+      <clipPath id="clip-meph"><circle cx="335" cy="422" r="26"/></clipPath>
+      <clipPath id="clip-faust"><circle cx="420" cy="422" r="26"/></clipPath>
+      <clipPath id="clip-w"><circle cx="95" cy="442" r="25"/></clipPath>
+      <clipPath id="clip-amiya"><circle cx="660" cy="250" r="29"/></clipPath>
+      <clipPath id="clip-kal"><circle cx="815" cy="250" r="27"/></clipPath>
+      <clipPath id="clip-nine"><circle cx="625" cy="405" r="29"/></clipPath>
+      <clipPath id="clip-eblana"><circle cx="795" cy="405" r="30"/></clipPath>
+    </defs>
+
+    <!-- Quadrant Boxes -->
+    <rect x="12" y="10" width="420" height="170" rx="6" fill="rgba(90, 169, 230, 0.06)" stroke="rgba(90, 169, 230, 0.3)" stroke-dasharray="4,4"/>
+    <text x="22" y="29" fill="#7cc0f5" font-size="11" font-weight="bold">【第一象限：血脉与龙门故土】 (Lungmen &amp; Family)</text>
+
+    <rect x="488" y="10" width="420" height="170" rx="6" fill="rgba(224, 82, 66, 0.07)" stroke="rgba(224, 82, 66, 0.35)" stroke-dasharray="4,4"/>
+    <text x="498" y="29" fill="#f07162" font-size="11" font-weight="bold">【第二象限：乌萨斯与黑蛇宿命】 (The Black Snake Curse)</text>
+
+    <rect x="12" y="192" width="435" height="306" rx="6" fill="rgba(82, 183, 136, 0.06)" stroke="rgba(82, 183, 136, 0.3)" stroke-dasharray="4,4"/>
+    <text x="22" y="211" fill="#74c69d" font-size="11" font-weight="bold">【第三象限：北原微光与早期整合运动】 (Early Reunion Family)</text>
+
+    <rect x="473" y="192" width="435" height="306" rx="6" fill="rgba(179, 136, 235, 0.06)" stroke="rgba(179, 136, 235, 0.3)" stroke-dasharray="4,4"/>
+    <text x="483" y="211" fill="#c8a4f5" font-size="11" font-weight="bold">【第四象限：审判、新整合与红龙镜像】 (Redemption &amp; Draco Foil)</text>
+
+    <!-- Clean Connecting Lines -->
+    <line x1="125" y1="110" x2="416" y2="226" stroke="#5aa9e6" stroke-width="1.6" marker-end="url(#arrow-blue)"/>
+    <line x1="225" y1="142" x2="422" y2="220" stroke="#5aa9e6" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#arrow-blue)"/>
+    <line x1="355" y1="142" x2="435" y2="208" stroke="#5aa9e6" stroke-width="2.5" marker-end="url(#arrow-blue)" marker-start="url(#arrow-blue)"/>
+
+    <line x1="575" y1="142" x2="490" y2="208" stroke="#e05242" stroke-width="2.6" stroke-dasharray="6,3" marker-end="url(#arrow-red)" marker-start="url(#arrow-red)"/>
+    <line x1="735" y1="142" x2="502" y2="222" stroke="#e05242" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#arrow-red)"/>
+
+    <line x1="125" y1="254" x2="412" y2="246" stroke="#52b788" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+    <line x1="286" y1="274" x2="412" y2="254" stroke="#52b788" stroke-width="2.6" marker-end="url(#arrow-green)" marker-start="url(#arrow-green)"/>
+    <line x1="135" y1="326" x2="414" y2="262" stroke="#52b788" stroke-width="1.8" marker-end="url(#arrow-green)"/>
+    <line x1="248" y1="398" x2="424" y2="272" stroke="#52b788" stroke-width="2" marker-end="url(#arrow-green)"/>
+    <line x1="345" y1="396" x2="440" y2="288" stroke="#c9a45c" stroke-width="1.5" marker-end="url(#arrow-gold)"/>
+    <line x1="422" y1="396" x2="452" y2="290" stroke="#c9a45c" stroke-width="1.5" marker-end="url(#arrow-gold)"/>
+    <line x1="120" y1="435" x2="418" y2="270" stroke="#e05242" stroke-width="1.3" stroke-dasharray="4,4" marker-end="url(#arrow-red)"/>
+
+    <line x1="630" y1="250" x2="508" y2="246" stroke="#b388eb" stroke-width="2.5" marker-end="url(#arrow-purple)" marker-start="url(#arrow-purple)"/>
+    <line x1="786" y1="250" x2="690" y2="250" stroke="#b388eb" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="605" y1="382" x2="495" y2="272" stroke="#b388eb" stroke-width="2" marker-end="url(#arrow-purple)"/>
+    <line x1="765" y1="388" x2="504" y2="262" stroke="#b388eb" stroke-width="2.2" stroke-dasharray="6,3" marker-end="url(#arrow-purple)" marker-start="url(#arrow-purple)"/>
+
+    <!-- Pill Badges on Key Lines -->
+    <rect x="334" y="156" width="106" height="17" rx="3" fill="#101824" stroke="#5aa9e6" stroke-width="1"/>
+    <text x="387" y="168" fill="#bbdefb" font-size="8.5" font-weight="bold" text-anchor="middle">同母异父姐妹·拔剑救赎</text>
+
+    <rect x="490" y="156" width="118" height="17" rx="3" fill="#241012" stroke="#e05242" stroke-width="1"/>
+    <text x="549" y="168" fill="#ff8a80" font-size="8.5" font-weight="bold" text-anchor="middle">18岁弑父·黑蛇意识寄生</text>
+
+    <rect x="300" y="250" width="102" height="17" rx="3" fill="#102219" stroke="#52b788" stroke-width="1"/>
+    <text x="351" y="262" fill="#95d5b2" font-size="8.5" font-weight="bold" text-anchor="middle">灵魂知己·遇害致崩塌</text>
+
+    <rect x="522" y="235" width="102" height="17" rx="3" fill="#1c1228" stroke="#b388eb" stroke-width="1"/>
+    <text x="573" y="247" fill="#e1bee7" font-size="8.5" font-weight="bold" text-anchor="middle">精神共情·助锁死黑蛇</text>
+
+    <rect x="592" y="314" width="142" height="17" rx="3" fill="#241224" stroke="#f48fb1" stroke-width="1"/>
+    <text x="663" y="326" fill="#f8bbd0" font-size="8.5" font-weight="bold" text-anchor="middle">红龙镜像：橙红生火 vs 幽紫死火</text>
+
+    <!-- ==================== NODES ==================== -->
+    <rect x="24" y="66" width="104" height="52" rx="5" fill="#182232" stroke="#5aa9e6" stroke-width="1.5"/>
+    <text x="76" y="84" fill="#ffffff" font-size="9.8" font-weight="bold" text-anchor="middle">爱德华 × 魏氏</text>
+    <text x="76" y="98" fill="#90caf9" font-size="8.2" text-anchor="middle">生父(1067殁)与生母</text>
+    <text x="76" y="111" fill="#b0bec5" font-size="7.6" text-anchor="middle">红龙王血与炎国神民</text>
+
+    <circle cx="205" cy="84" r="29" fill="#182232" stroke="#5aa9e6" stroke-width="2"/>
+    <image href="./assets/wei_yenwu.png" x="174" y="53" width="62" height="62" clip-path="url(#clip-wei)" preserveAspectRatio="xMidYMin slice"/>
+    <rect x="151" y="115" width="108" height="29" rx="3" fill="#121620" stroke="#5aa9e6" stroke-width="1"/>
+    <text x="205" y="128" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">魏彦吾 (亲舅舅)</text>
+    <text x="205" y="139" fill="#90caf9" font-size="7.8" text-anchor="middle">杀父之仇与政治妥协</text>
+
+    <circle cx="335" cy="84" r="31" fill="#182232" stroke="#5aa9e6" stroke-width="2.4"/>
+    <image href="./assets/chen_icon.png" x="304" y="53" width="62" height="62" clip-path="url(#clip-chen)" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="279" y="115" width="112" height="29" rx="3" fill="#121620" stroke="#5aa9e6" stroke-width="1"/>
+    <text x="335" y="128" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">陈晖洁 (同母异父妹)</text>
+    <text x="335" y="139" fill="#90caf9" font-size="7.8" text-anchor="middle">执赤霄斩断姐姐枷锁</text>
+
+    <circle cx="595" cy="84" r="31" fill="#2a1616" stroke="#e05242" stroke-width="2.4"/>
+    <image href="./assets/kashchey.png" x="561" y="50" width="68" height="68" clip-path="url(#clip-kash)" preserveAspectRatio="xMidYMin slice"/>
+    <rect x="531" y="115" width="128" height="29" rx="3" fill="#1a1214" stroke="#e05242" stroke-width="1"/>
+    <text x="595" y="128" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">科西切 (“不死的黑蛇”)</text>
+    <text x="595" y="139" fill="#ff8a80" font-size="7.8" text-anchor="middle">养父 / 千年精神寄生恶魔</text>
+
+    <circle cx="765" cy="84" r="29" fill="#2a1616" stroke="#e05242" stroke-width="2"/>
+    <image href="./assets/koshelna.png" x="733" y="52" width="64" height="64" clip-path="url(#clip-kosh)" preserveAspectRatio="xMidYMin slice"/>
+    <rect x="704" y="115" width="122" height="29" rx="3" fill="#1a1214" stroke="#e05242" stroke-width="1"/>
+    <text x="765" y="128" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">科谢尔娜 (Koshelna)</text>
+    <text x="765" y="139" fill="#ff8a80" font-size="7.8" text-anchor="middle">黑蛇次级传人 / 第10&amp;17章宿敌</text>
+
+    <rect x="24" y="230" width="104" height="44" rx="4" fill="#162820" stroke="#52b788" stroke-width="1.2"/>
+    <text x="76" y="248" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">老伊万 (北原恩人)</text>
+    <text x="76" y="262" fill="#95d5b2" font-size="7.8" text-anchor="middle">藏匿塔露拉3年被杀害</text>
+
+    <circle cx="255" cy="276" r="31" fill="#162820" stroke="#52b788" stroke-width="2.4"/>
+    <image href="./assets/alina.png" x="221" y="242" width="68" height="68" clip-path="url(#clip-alina)" preserveAspectRatio="xMidYMin slice"/>
+    <rect x="197" y="309" width="116" height="29" rx="3" fill="#121e18" stroke="#52b788" stroke-width="1"/>
+    <text x="255" y="322" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">阿丽娜 (Alina)</text>
+    <text x="255" y="333" fill="#95d5b2" font-size="7.8" text-anchor="middle">艾拉菲亚教师 / 道德锚点</text>
+
+    <circle cx="105" cy="330" r="30" fill="#162820" stroke="#52b788" stroke-width="2"/>
+    <image href="./assets/patriot.png" x="73" y="298" width="64" height="64" clip-path="url(#clip-patriot)" preserveAspectRatio="xMidYMin slice"/>
+    <rect x="46" y="362" width="118" height="29" rx="3" fill="#121e18" stroke="#52b788" stroke-width="1"/>
+    <text x="105" y="375" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">博卓卡斯替 (爱国者)</text>
+    <text x="105" y="386" fill="#95d5b2" font-size="7.8" text-anchor="middle">温迪戈军神 / 后被黑蛇算计战死</text>
+
+    <circle cx="220" cy="412" r="30" fill="#162820" stroke="#52b788" stroke-width="2"/>
+    <image href="./assets/frostnova.png" x="188" y="380" width="64" height="64" clip-path="url(#clip-frost)" preserveAspectRatio="xMidYMin slice"/>
+    <rect x="164" y="444" width="112" height="29" rx="3" fill="#121e18" stroke="#52b788" stroke-width="1"/>
+    <text x="220" y="457" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">叶莲娜 (霜星)</text>
+    <text x="220" y="468" fill="#95d5b2" font-size="7.8" text-anchor="middle">决斗结义义妹 / 临终托付拯救</text>
+
+    <circle cx="335" cy="422" r="27" fill="#242016" stroke="#c9a45c" stroke-width="1.8"/>
+    <image href="./assets/mephisto.png" x="307" y="394" width="56" height="56" clip-path="url(#clip-meph)" preserveAspectRatio="xMidYMin slice"/>
+    <text x="335" y="461" fill="#e6c687" font-size="8.5" font-weight="bold" text-anchor="middle">梅菲斯特(伊诺)</text>
+    <text x="377" y="474" fill="#c9a45c" font-size="7.6" text-anchor="middle">早年收留 → 黑蛇期放纵异化</text>
+
+    <circle cx="420" cy="422" r="27" fill="#242016" stroke="#c9a45c" stroke-width="1.8"/>
+    <image href="./assets/faust.png" x="392" y="394" width="56" height="56" clip-path="url(#clip-faust)" preserveAspectRatio="xMidYMin slice"/>
+    <text x="420" y="461" fill="#e6c687" font-size="8.5" font-weight="bold" text-anchor="middle">浮士德(萨沙)</text>
+
+    <circle cx="95" cy="442" r="26" fill="#2a1616" stroke="#e05242" stroke-width="1.8"/>
+    <image href="./assets/w_npc.png" x="68" y="415" width="54" height="54" clip-path="url(#clip-w)" preserveAspectRatio="xMidYMin slice"/>
+    <text x="95" y="481" fill="#ffab91" font-size="8.2" font-weight="bold" text-anchor="middle">W (最早察觉她被调包)</text>
+
+    <circle cx="660" cy="250" r="30" fill="#221830" stroke="#b388eb" stroke-width="2.4"/>
+    <image href="./assets/amiya_icon.png" x="630" y="220" width="60" height="60" clip-path="url(#clip-amiya)" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="604" y="282" width="112" height="29" rx="3" fill="#181224" stroke="#b388eb" stroke-width="1"/>
+    <text x="660" y="295" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">阿米娅 (罗德岛领袖)</text>
+    <text x="660" y="306" fill="#e1bee7" font-size="7.8" text-anchor="middle">与陈双剑破局 / 唤醒本我</text>
+
+    <circle cx="815" cy="250" r="28" fill="#221830" stroke="#b388eb" stroke-width="1.8"/>
+    <image href="./assets/kaltsit_icon.png" x="787" y="222" width="56" height="56" clip-path="url(#clip-kal)" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="763" y="282" width="104" height="29" rx="3" fill="#181224" stroke="#b388eb" stroke-width="1"/>
+    <text x="815" y="295" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">凯尔希 (Kal'tsit)</text>
+    <text x="815" y="306" fill="#e1bee7" font-size="7.8" text-anchor="middle">囚室审讯与地缘洞察</text>
+
+    <circle cx="625" cy="405" r="30" fill="#221830" stroke="#b388eb" stroke-width="2.2"/>
+    <image href="./assets/nine.png" x="593" y="373" width="64" height="64" clip-path="url(#clip-nine)" preserveAspectRatio="xMidYMin slice"/>
+    <rect x="565" y="437" width="120" height="29" rx="3" fill="#181224" stroke="#b388eb" stroke-width="1"/>
+    <text x="625" y="450" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">九 (Nine / 新整合运动)</text>
+    <text x="625" y="461" fill="#e1bee7" font-size="7.8" text-anchor="middle">劫狱审判官与麦田同行者</text>
+
+    <circle cx="795" cy="405" r="31" fill="#221830" stroke="#b388eb" stroke-width="2.4"/>
+    <image href="./assets/eblana.png" x="763" y="373" width="64" height="64" clip-path="url(#clip-eblana)" preserveAspectRatio="xMidYMin slice"/>
+    <rect x="729" y="437" width="132" height="29" rx="3" fill="#181224" stroke="#b388eb" stroke-width="1"/>
+    <text x="795" y="450" fill="#fff" font-size="9.2" font-weight="bold" text-anchor="middle">爱布拉娜 (死芒/深池领袖)</text>
+    <text x="795" y="461" fill="#f8bbd0" font-size="7.8" text-anchor="middle">维多利亚德拉科王血镜像</text>
+
+    <!-- CENTER NODE: TALULAH -->
+    <circle cx="460" cy="245" r="50" fill="#181216" stroke="#d64535" stroke-width="3.2"/>
+    <circle cx="460" cy="245" r="46" fill="none" stroke="#c9a45c" stroke-width="1.5"/>
+    <image href="./assets/talulah_act1.png" x="406" y="191" width="108" height="108" clip-path="url(#clip-center)" preserveAspectRatio="xMidYMin slice"/>
+    <rect x="392" y="287" width="136" height="31" rx="4" fill="#141720" stroke="#c9a45c" stroke-width="1.5"/>
+    <text x="460" y="300" fill="#ffffff" font-size="10.2" font-weight="bold" text-anchor="middle">塔露拉·雅特利亚斯</text>
+    <text x="460" y="312" fill="#e85d4a" font-size="8.2" font-weight="bold" text-anchor="middle">德拉科×神民 · 整合运动缔造者</text>
+  </svg>
+</div>
+
+<div class="sub-header">
+  <span>2.1 血脉与故乡（龙门线）&amp; 宿命的诅咒（黑蛇线）</span>
+  <span class="stage-ref">核心关系解析 I &amp; II</span>
+</div>
+
+<div class="grid-2">
+  <div class="char-card">
+    <div class="char-avatar"><img src="./assets/chen_icon.png" alt="陈晖洁"></div>
+    <div>
+      <div class="char-meta-name"><span>陈晖洁 (Ch'en)</span><span class="char-role-badge">同母异父胞妹 / 执剑救赎者</span></div>
+      <div class="char-meta-desc">
+        幼年时塔露拉是唯一为她挡下母亲责打、帮她把玩偶藏在床底的姐姐。1077年分离后，陈为追寻姐姐考入皇家近卫学院并执掌龙门近卫局。在切城核心塔（《JT8-2/JT8-3》）中，陈超越了盲从与私怨，以“赤霄”与阿米娅并肩斩断黑蛇枷锁，坚持以审判而非私刑挽救姐姐的灵魂。
+      </div>
+    </div>
+  </div>
+  <div class="char-card">
+    <div class="char-avatar"><img src="./assets/wei_yenwu.png" alt="魏彦吾"></div>
+    <div>
+      <div class="char-meta-name"><span>魏彦吾 (Wei Yenwu)</span><span class="char-role-badge">亲舅舅 / 龙门最高执政</span></div>
+      <div class="char-meta-desc">
+        塔露拉生父爱德华的结拜兄弟，却在1067年为保全龙门被迫杀害爱德华；1077年又在科西切的政治讹诈下放弃武力营救9岁的塔露拉。在塔露拉眼中，魏彦吾代表着“以大局为名牺牲至亲与弱者”的冷酷政客；而黑蛇正是利用这份怨恨，策划了驱使切城撞击龙门的毒计。
+      </div>
+    </div>
+  </div>
+  <div class="char-card">
+    <div class="char-avatar"><img src="./assets/kashchey.png" alt="科西切"></div>
+    <div>
+      <div class="char-meta-name"><span>科西切 (“不死的黑蛇”)</span><span class="char-role-badge">养父 / 千年精神寄生体</span></div>
+      <div class="char-meta-desc">
+        乌萨斯帝国扩张主义与人性恶念的古老化身。他花费9年培养塔露拉，在1086年故意引导18岁的塔露拉用源石刺伤自己并杀害他，从而在她灵魂深处埋下“同化烙印”。他从不强行控制意志坚定者，而是耐心等待冻原的残酷现实击垮塔露拉的善意，最终在粮仓大火中赢下赌局。
+      </div>
+    </div>
+  </div>
+  <div class="char-card">
+    <div class="char-avatar"><img src="./assets/koshelna.png" alt="科谢尔娜"></div>
+    <div>
+      <div class="char-meta-name"><span>科谢尔娜 (Koshelna)</span><span class="char-role-badge">黑蛇次级容器 / 极北宿敌</span></div>
+      <div class="char-meta-desc">
+        科西切为防备塔露拉脱离控制而提前在乌萨斯贵族女校埋下的“备用继承人”。她在第10章《10-19》化名教师“柳德米拉”试图劝诱越狱后的塔露拉重回黑蛇怀抱，被觉醒的塔露拉一剑击败；在第17章《离解复合》中，她再度于极北煽动感染者哗变，成为塔露拉必须彻底清算的宿命死敌。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sub-header">
+  <span>2.2 冻原的理想与破碎的家族（早期整合运动线）</span>
+  <span class="stage-ref">核心关系解析 III</span>
+</div>
+
+<div class="grid-2">
+  <div class="char-card">
+    <div class="char-avatar"><img src="./assets/alina.png" alt="阿丽娜"></div>
+    <div>
+      <div class="char-meta-name"><span>阿丽娜 (Alina)</span><span class="char-role-badge">灵魂挚友 / 精神道德灯塔</span></div>
+      <div class="char-meta-desc">
+        感染者乡村女教师（艾拉菲亚/鹿娘）。她看穿了塔露拉坚强外表下的孤独与偏执，教导营地孩童读书，并留下名言：<em>“如果太阳融化了冰川，乌萨斯的冬天很快就会再临。”</em>她在《R8-9》被暴徒残忍虐杀，直接抽走了塔露拉最后的情绪锚点与倾诉出口，是塔露拉走向黑化的第一重致命转折。
+      </div>
+    </div>
+  </div>
+  <div class="char-card">
+    <div class="char-avatar"><img src="./assets/patriot.png" alt="爱国者"></div>
+    <div>
+      <div class="char-meta-name"><span>博卓卡斯替 (爱国者 Patriot)</span><span class="char-role-badge">温迪戈老将 / 父辈与柱石</span></div>
+      <div class="char-meta-desc">
+        纯血温迪戈、前乌萨斯帝国大尉。在《R8-5》被年轻塔露拉无畏的眼神与理想打动，视她如亲生女儿般追随，成为整合运动不可撼动的军事脊梁。黑蛇篡夺塔露拉主导权后，深知无法说服爱国者，便蓄意用切城暴动绑架感染者大义，借罗德岛之手除掉了这位忠贞不渝的老将。
+      </div>
+    </div>
+  </div>
+  <div class="char-card">
+    <div class="char-avatar"><img src="./assets/frostnova.png" alt="霜星"></div>
+    <div>
+      <div class="char-meta-name"><span>叶莲娜 (霜星 FrostNova)</span><span class="char-role-badge">雪怪小队领袖 / 生死义妹</span></div>
+      <div class="char-meta-desc">
+        爱国者的养女。在冻原与塔露拉激战数日后被其赤诚折服，两人情同亲姐妹。霜星最早敏锐地警告塔露拉：<em>“不要把所有事都独自扛在肩上。”</em>在第六章战死前，霜星痛苦地意识到眼前的暴君已不再是昔日的大姐，临终托付阿米娅与罗德岛阻止并拯救那个真正的塔露拉。
+      </div>
+    </div>
+  </div>
+  <div class="char-card">
+    <div class="char-avatar"><img src="./assets/mephisto.png" alt="梅菲斯特"></div>
+    <div>
+      <div class="char-meta-name"><span>梅菲斯特 &amp; 浮士德 / 弑君者 / W</span><span class="char-role-badge">被救孤儿与分化干部</span></div>
+      <div class="char-meta-desc">
+        早期塔露拉救下受虐孤儿<strong>伊诺（梅菲斯特）</strong>与<strong>萨沙（浮士德）</strong>，并感召<strong>柳德米拉（弑君者）</strong>；但在黑蛇接管后，她故意纵容梅菲斯特的扭曲暴虐将其当作消耗品，导致浮士德悲剧战死。而佣兵<strong>W</strong>则凭直觉最早识破塔露拉“灵魂换了人”，并在切城多次策划刺杀她。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sub-header">
+  <span>2.3 审判、救赎与德拉科双生镜像（罗德岛、新整合运动与维多利亚线）</span>
+  <span class="stage-ref">核心关系解析 IV</span>
+</div>
+
+<div class="grid-2">
+  <div class="char-card">
+    <div class="char-avatar"><img src="./assets/amiya_icon.png" alt="阿米娅"></div>
+    <div>
+      <div class="char-meta-name"><span>阿米娅 &amp; 凯尔希</span><span class="char-role-badge">罗德岛精神破局者</span></div>
+      <div class="char-meta-desc">
+        阿米娅在《JT8-3》用魔王共情读取塔露拉的痛苦记忆，帮她在精神空间锁死黑蛇；凯尔希则在《END8-1》囚室中与她展开关于乌萨斯地缘宿命的思辨。
+      </div>
+    </div>
+  </div>
+  <div class="char-card">
+    <div class="char-avatar"><img src="./assets/nine.png" alt="九"></div>
+    <div>
+      <div class="char-meta-name"><span>九 (Nine) &amp; Guard</span><span class="char-role-badge">新整合运动领袖</span></div>
+      <div class="char-meta-desc">
+        前近卫局同僚“九”在第9章劫狱带走塔露拉，不是为了奉她为神，而是逼她亲眼见证自己造成的苦难并赎罪；到第16章，两人已成为麦田里并肩劳作的战友。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="char-card" style="margin-bottom: 12px;">
+  <div class="char-avatar"><img src="./assets/eblana.png" alt="爱布拉娜"></div>
+  <div>
+    <div class="char-meta-name"><span>爱布拉娜·都柏林 (死芒 / Eblana)</span><span class="char-role-badge">维多利亚深池领袖 / 德拉科王血双生镜像</span></div>
+    <div class="char-meta-desc">
+      同为维多利亚德拉科（红龙）王室血脉的完美叙事镜像（《13-22》）：爱布拉娜拥抱纯粹的王权傲慢，将追随者的死视为仍可由“幽紫死火”驱使的柴薪；而历经黑蛇地狱后觉醒的塔露拉，则以温暖的“橙红生命之火”正面击碎了爱布拉娜的傲慢，完成了对昔日暴君自我的彻底告别。
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CHAPTER 3: PSYCHOLOGY & BLACK SNAKE DECONSTRUCTION ==================== -->
+<div class="page-break"></div>
+<div class="chapter-banner">
+  <div class="chapter-banner-left">
+    <div class="ch-tag">SECTION 03 // PSYCHOLOGICAL PROFILE &amp; DECONSTRUCTION OF "THE DEATHLESS BLACK SNAKE"</div>
+    <h2 class="ch-title">第三章：性格动机与“不死的黑蛇”夺舍机制深度解构</h2>
+  </div>
+  <div class="chapter-banner-right">
+    4-LAYER CURSE MODEL<br>STAGES: R8-3 / R8-9 / R8-11 / JT8-1 / 10-19
+  </div>
+</div>
+
+<div class="sub-header">
+  <span>3.1 塔露拉的人格底色与两大致命性格隐患</span>
+  <span class="stage-ref">心理画像分析</span>
+</div>
+
+<div class="grid-2 avoid-break">
+  <div class="dossier-box" style="margin-bottom:0;">
+    <div class="dossier-box-title">◆ 1. 极致的共情力与“火焰般”的理想主义底色</div>
+    <p style="margin-bottom:0;">
+      真实的塔露拉绝非天生冷酷的野心家。相反，无论是幼年替妹妹陈晖洁挡下责打，18岁为替乌萨斯底层讨回公道不惜自刺源石，还是在冻原为素昧平生的感染者孤儿筑起家园，她的本性都如她操控的<strong>橙红烈焰</strong>一般炽热、纯粹且充满保护欲。爱国者之所以愿意将雪怪与温迪戈的命运托付给她，正是因为她在风雪中说出：<em>“如果没人站出来，我们就永远只能像牲畜一样死在冻原上！”</em>
+    </p>
+  </div>
+  <div class="dossier-box" style="margin-bottom:0;">
+    <div class="dossier-box-title">◆ 2. 致命性格隐患：封闭式“孤胆救世主”情结与原罪感</div>
+    <p style="margin-bottom:0;">
+      然而，9年科西切宫廷囚禁与尊贵的“公爵继承人”出身，让塔露拉背负着深重的<strong>道德原罪感</strong>。她始终不敢向爱国者、霜星坦白自己曾是科西切养女的过去，更习惯将所有决策压力、战友伤亡与道德困境<strong>独自一人死死憋在心里</strong>。早在《R8-3》中，霜星就曾敏锐地警告她：<em>“塔露拉，你总是把所有人的担子都抢到自己肩上，从来不肯对我们流露一丝软弱——这样下去，有一天你会把自己折断的。”</em>
+    </p>
+  </div>
+</div>
+
+<div class="sub-header">
+  <span>3.2 核心命题四层解构：塔露拉究竟是“被洗脑的无辜者”还是“堕落的暴君”？</span>
+  <span class="stage-ref">国内外剧情考据核心共识</span>
+</div>
+
+<div class="dossier-box avoid-break" style="border-top-color:#8f261b;">
+  <div class="dossier-box-title">【第一层：诅咒的底层法则——有条件的心理赌局】</div>
+  <p style="margin-bottom:0;">
+    科西切的源石技艺“不死的黑蛇”<strong>绝非强行抹杀宿主自由意志的机械洗脑</strong>。黑蛇在《R8-1》与《JT8-3》中亲口承认：只要塔露拉依然相信人类、依然秉持善意与希望，黑蛇就只能被压制在潜意识最底层。<strong>黑蛇苏醒并接管身体的唯一触发条件，是宿主自己在极度的绝望与憎恨中，主动在内心承认“科西切是对的，这片大地与人性卑劣得无可救药，唯有铁血与毁灭才能解决问题”。</strong>
+  </p>
+</div>
+
+<div class="dossier-box avoid-break" style="border-top-color:#c9a45c;">
+  <div class="dossier-box-title">【第二层：击穿防线的三重重击——从希望到绝望】</div>
+  <p style="margin-bottom:0;">
+    1086至1095年间，塔露拉凭借强大的意志力抵抗了黑蛇整整九年。然而1095—1096年接踵而至的<strong>三重致命打击</strong>彻底摧毁了她的心理支点：① <strong>阿丽娜被残忍虐杀（R8-9）</strong>：唯一的心理倾诉者与劝诫她“克制怒火”的道德灯塔熄灭；② <strong>内卫攻山与身世曝光（R8-11）</strong>：帝国精锐“皇帝的利刃”当众揭穿她是科西切继承人，引发营地内部猜忌与惨重伤亡；③ <strong>北方农庄“粮仓惨案”（JT8-1）</strong>。
+  </p>
+</div>
+
+<div class="dossier-box avoid-break" style="border-top-color:#d64535;">
+  <div class="dossier-box-title">【第三层：粮仓大火中的“仇恨共谋”——自我放逐与夺舍】</div>
+  <p style="margin-bottom:0;">
+    在《JT8-1》中，一对善良的非感染者老农夫妇冒着死罪将塔露拉的感染者部下藏在自家粮仓中。然而当塔露拉赶到时，她保护的感染者村民仅仅因为发现粮仓里藏有粮食、怀疑老农夫妇将来会告密，竟残忍杀害了这对救命恩人！看着满屋鲜血与感染者贪婪麻木的嘴脸，塔露拉心中保护弱者的信仰瞬间崩塌——<strong>她爆发出想要烧尽一切卑劣人类的滔天恨意，放火焚毁了整个村庄。就在她因仇恨而否定人性的这一秒，她的思想与科西切达成共振，黑蛇顺理成章接管了躯体。</strong>
+  </p>
+</div>
+
+<div class="dossier-box avoid-break" style="border-top-color:#1c202b;">
+  <div class="dossier-box-title">【第四层：清醒后的伦理担当——拒绝拿黑蛇当免罪金牌】</div>
+  <p style="margin-bottom:0;">
+    塔露拉人物塑造最耀眼的高光，在于她清醒后的态度。在《JT8-3》《END8-1》与《10-19》中，无论是陈、阿米娅还是九，都深知她曾受黑蛇操控；但<strong>塔露拉本人严词拒绝以“被黑蛇附身”作为开脱罪责的借口</strong>。她清醒地认识到：是她自己在粮仓惨案中选择了绝望、选择了憎恨、选择了软弱地向黑蛇交出方向盘。因此她坦然接受监禁与审判，并立誓亲手清除黑蛇在泰拉留下的所有余毒。
+  </p>
+</div>
+
+<!-- CUSTOM INLINE SVG FLOWCHART: COLLAPSE MECHANISM & DUAL-TIMELINE STRUCTURE -->
+<div class="dossier-box avoid-break" style="padding:10px; background:#12151e; border:1.5px solid #c9a45c;">
+  <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(201,164,92,0.35); padding-bottom:5px; margin-bottom:8px;">
+    <span style="color:#e6c687; font-weight:bold; font-size:9.8pt;">◆ 视觉图谱 02：塔露拉心理崩塌机制、黑蛇夺舍脉络与主线全周期演变图</span>
+    <span style="color:#a8a296; font-size:7.8pt; font-family:Consolas,monospace;">展示 R8 过去线如何一步步推导至 M8/JT8 切城决战及第9-17章新生</span>
+  </div>
+
+  <svg viewBox="0 0 920 265" width="100%" style="display:block; background:#161a26; border-radius:4px;">
+    <defs>
+      <marker id="fl-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 1 L 10 5 L 0 9 z" fill="#c9a45c"/>
+      </marker>
+      <marker id="fl-arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 1 L 10 5 L 0 9 z" fill="#e05242"/>
+      </marker>
+      <marker id="fl-arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 1 L 10 5 L 0 9 z" fill="#52b788"/>
+      </marker>
+    </defs>
+
+    <rect x="12" y="12" width="155" height="104" rx="5" fill="#1d283a" stroke="#5aa9e6" stroke-width="1.5"/>
+    <text x="89" y="30" fill="#90caf9" font-size="9.5" font-weight="bold" text-anchor="middle">① 埋下诅咒与冻原立誓</text>
+    <text x="89" y="44" fill="#cfd8dc" font-size="7.8" text-anchor="middle">(1086—1094 · R8-1~R8-8)</text>
+    <text x="20" y="61" fill="#fff" font-size="8">· 18岁刺源石弑父科西切</text>
+    <text x="20" y="75" fill="#fff" font-size="8">· 脑海埋下“黑蛇”精神种子</text>
+    <text x="20" y="89" fill="#95d5b2" font-size="8">· 与阿丽娜/爱国者/霜星</text>
+    <text x="20" y="103" fill="#95d5b2" font-size="8">  创立守望相助的整合运动</text>
+
+    <rect x="12" y="132" width="155" height="118" rx="5" fill="#261e18" stroke="#c9a45c" stroke-width="1.5"/>
+    <text x="89" y="150" fill="#e6c687" font-size="9.5" font-weight="bold" text-anchor="middle">⚠️ 内部性格隐患</text>
+    <text x="20" y="168" fill="#ffe0b2" font-size="8">1. 隐瞒“科西切继承人”身份</text>
+    <text x="20" y="182" fill="#ffe0b2" font-size="8">   背负沉重贵族原罪感</text>
+    <text x="20" y="199" fill="#ffe0b2" font-size="8">2. 封闭式“独断救世主”重压</text>
+    <text x="20" y="213" fill="#ffe0b2" font-size="8">   拒绝向爱国者/霜星分担</text>
+    <text x="20" y="232" fill="#ffab91" font-size="7.8">→ 缺乏容错机制，全靠阿丽娜疏导</text>
+
+    <line x1="167" y1="65" x2="195" y2="95" stroke="#c9a45c" stroke-width="1.8" marker-end="url(#fl-arrow)"/>
+    <line x1="167" y1="190" x2="195" y2="158" stroke="#c9a45c" stroke-width="1.8" marker-end="url(#fl-arrow)"/>
+
+    <rect x="198" y="14" width="176" height="236" rx="5" fill="#2b181b" stroke="#e05242" stroke-width="1.8"/>
+    <text x="286" y="32" fill="#ff8a80" font-size="9.8" font-weight="bold" text-anchor="middle">② 击穿防线的三重重击</text>
+    <text x="286" y="46" fill="#ef9a9a" font-size="7.8" text-anchor="middle">(1095—1096 · R8-9 ~ JT8-1)</text>
+
+    <rect x="207" y="55" width="158" height="50" rx="3" fill="#1a1113" stroke="#e05242" stroke-width="1"/>
+    <text x="213" y="70" fill="#ffcdd2" font-size="8.2" font-weight="bold">重击 A：阿丽娜被虐杀 (R8-9)</text>
+    <text x="213" y="84" fill="#d7ccc8" font-size="7.8">失去唯一的灵魂挚友与情绪刹车片</text>
+    <text x="213" y="97" fill="#d7ccc8" font-size="7.8">压抑的复仇怒火开始在胸中滋长</text>
+
+    <rect x="207" y="112" width="158" height="50" rx="3" fill="#1a1113" stroke="#e05242" stroke-width="1"/>
+    <text x="213" y="127" fill="#ffcdd2" font-size="8.2" font-weight="bold">重击 B：内卫攻山与曝光 (R8-11)</text>
+    <text x="213" y="141" fill="#d7ccc8" font-size="7.8">内卫当众揭穿其“科西切养女”身份</text>
+    <text x="213" y="154" fill="#d7ccc8" font-size="7.8">内部信任动摇，主力遭受毁灭重创</text>
+
+    <rect x="207" y="169" width="158" height="70" rx="3" fill="#3e1416" stroke="#ff5252" stroke-width="1.4"/>
+    <text x="213" y="184" fill="#ff8a80" font-size="8.2" font-weight="bold">重击 C：北方粮仓惨案 (JT8-1)</text>
+    <text x="213" y="198" fill="#fff" font-size="7.8">被她保护的感染者残杀包庇他们的</text>
+    <text x="213" y="211" fill="#fff" font-size="7.8">无辜老农夫妇！塔露拉彻底绝望，</text>
+    <text x="213" y="226" fill="#ffccbc" font-size="7.8" font-weight="bold">放火屠村，内心认同“人性卑劣”</text>
+
+    <line x1="374" y1="132" x2="402" y2="132" stroke="#e05242" stroke-width="2.2" marker-end="url(#fl-arrow-red)"/>
+
+    <rect x="405" y="14" width="166" height="236" rx="5" fill="#21131d" stroke="#d64535" stroke-width="2"/>
+    <text x="488" y="32" fill="#ff5252" font-size="9.8" font-weight="bold" text-anchor="middle">③ 黑蛇夺舍与切城暴君</text>
+    <text x="488" y="46" fill="#f48fb1" font-size="7.8" text-anchor="middle">(1096.12—1097.01 · 第0—8章)</text>
+    <text x="414" y="65" fill="#fff" font-size="8">· 赌约生效：因恨同化，塔露拉</text>
+    <text x="414" y="79" fill="#fff" font-size="8">  本我退缩至潜意识，黑蛇掌权</text>
+    <text x="414" y="97" fill="#ffcdd2" font-size="8">· 整合运动异化为恐怖战争机器</text>
+    <text x="414" y="111" fill="#ffcdd2" font-size="8">· 1096.12.23 攻陷切尔诺伯格</text>
+    <text x="414" y="128" fill="#ffcdd2" font-size="8">· 借罗德岛与龙门之手清洗异己</text>
+    <text x="414" y="142" fill="#ffcdd2" font-size="8">  (霜星、浮士德、爱国者相继战死)</text>
+    <text x="414" y="160" fill="#ffab91" font-size="8">· 终极阴谋：驱使切城核心撞击</text>
+    <text x="414" y="174" fill="#ffab91" font-size="8">  龙门，挑起乌萨斯与大炎全面国战</text>
+    <rect x="414" y="192" width="148" height="45" rx="3" fill="#120b10" stroke="#c9a45c" stroke-width="1"/>
+    <text x="488" y="209" fill="#e6c687" font-size="7.8" text-anchor="middle">【叙事结构】M8 现实决战线</text>
+    <text x="488" y="224" fill="#cfd8dc" font-size="7.6" text-anchor="middle">与 R8 回忆线在 JT8-1 正式交汇</text>
+
+    <line x1="571" y1="132" x2="599" y2="132" stroke="#c9a45c" stroke-width="2.2" marker-end="url(#fl-arrow)"/>
+
+    <rect x="602" y="14" width="148" height="236" rx="5" fill="#1a2230" stroke="#c9a45c" stroke-width="1.8"/>
+    <text x="676" y="32" fill="#e6c687" font-size="9.8" font-weight="bold" text-anchor="middle">④ 双剑斩蛇与拒绝开脱</text>
+    <text x="676" y="46" fill="#b0bec5" font-size="7.8" text-anchor="middle">(1097.01 · JT8-2 ~ END8-1)</text>
+    <text x="610" y="65" fill="#fff" font-size="8">· 陈(赤霄)与阿米娅(影霄)击败黑蛇</text>
+    <text x="610" y="80" fill="#fff" font-size="8">· 阿米娅进入精神空间，唤醒</text>
+    <text x="610" y="94" fill="#fff" font-size="8">  塔露拉将黑蛇重新锁入意识铁笼</text>
+    <text x="610" y="112" fill="#ffe082" font-size="8" font-weight="bold">· 抗拒黑蛇自杀指令，为赎罪苟活</text>
+    <text x="610" y="129" fill="#fff" font-size="8">· 拒绝以“被附身”推卸罪责，</text>
+    <text x="610" y="143" fill="#fff" font-size="8">  作为战俘关押于罗德岛本舰</text>
+    <text x="610" y="162" fill="#90caf9" font-size="8">· 1097秋(9-19)：被“九”与新整合</text>
+    <text x="610" y="176" fill="#90caf9" font-size="8">  劫狱带走，踏上大地直面苦难</text>
+    <text x="610" y="195" fill="#90caf9" font-size="8">· 1098.05(10-19)：在北原击败</text>
+    <text x="610" y="209" fill="#90caf9" font-size="8">  黑蛇次级传人科谢尔娜，破除心魔</text>
+
+    <line x1="750" y1="132" x2="776" y2="132" stroke="#52b788" stroke-width="2.2" marker-end="url(#fl-arrow-green)"/>
+
+    <rect x="779" y="14" width="129" height="236" rx="5" fill="#162921" stroke="#52b788" stroke-width="1.8"/>
+    <text x="843" y="32" fill="#74c69d" font-size="9.5" font-weight="bold" text-anchor="middle">⑤ 红龙淬炼与麦田新生</text>
+    <text x="843" y="46" fill="#a5d6a7" font-size="7.8" text-anchor="middle">(1098—1100+ · 第12—17章)</text>
+    <text x="786" y="65" fill="#fff" font-size="8">· 伦蒂尼姆对决爱布拉娜</text>
+    <text x="786" y="79" fill="#95d5b2" font-size="7.8">  (13-22)：以守护生者的橙火</text>
+    <text x="786" y="93" fill="#95d5b2" font-size="7.8">  否定驱使亡者的紫火</text>
+    <text x="786" y="114" fill="#fff" font-size="8">· 乌萨斯边境开荒种麦</text>
+    <text x="786" y="128" fill="#95d5b2" font-size="7.8">  (16章 EG-7)：褪去救世主</text>
+    <text x="786" y="142" fill="#95d5b2" font-size="7.8">  光环，扎根泥土与民同行</text>
+    <text x="786" y="163" fill="#ffe082" font-size="8" font-weight="bold">· 重返极北冻原 (第17章)</text>
+    <text x="786" y="177" fill="#fff" font-size="7.8">  直面科谢尔娜煽动的哗变，</text>
+    <text x="786" y="191" fill="#fff" font-size="7.8">  开启彻底终结黑蛇与乌萨斯</text>
+    <text x="786" y="205" fill="#fff" font-size="7.8">  制度性压迫的新征程</text>
+  </svg>
+</div>
+
+<!-- ==================== CHAPTER 4: COMPLETE CHRONOLOGICAL TIMELINE ==================== -->
+<div class="page-break"></div>
+<div class="chapter-banner">
+  <div class="chapter-banner-left">
+    <div class="ch-tag">SECTION 04 // COMPLETE CHRONOLOGICAL TIMELINE (TERRA YEAR 1055 — 1100+)</div>
+    <h2 class="ch-title">第四章：泰拉历 1055—1100+ 塔露拉完整生命轨迹时间线</h2>
+  </div>
+  <div class="chapter-banner-right">
+    SOURCES: TERRA: A JOURNEY / CHERNOBOG REPORT<br>VERIFIED BY IN-GAME SCRIPT
+  </div>
+</div>
+
+<p>
+  为了方便读者直观检索塔露拉在不同历史节点的所处位置与心境变化，下表依据《明日方舟官方世界观设定集：大地巡旅》《罗德岛切尔诺伯格—龙门事变调查报告》及主线第0—17章官方剧情文本，按泰拉纪年精确还原了跨越四十余年的完整生命轨迹：
+</p>
+
+<table class="lore-table">
+  <thead>
+    <tr>
+      <th style="width:13%;">泰拉纪年</th>
+      <th style="width:9%;">年龄</th>
+      <th style="width:14%;">所处地域</th>
+      <th style="width:49%;">核心历史与生平事件（依据官方剧情与设定集校准）</th>
+      <th style="width:15%;">对应关卡 / 文献</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="year-pill">1055年</span></td>
+      <td>出生前13年</td>
+      <td>大炎·龙门</td>
+      <td>青年魏彦吾与维多利亚德拉科王室后裔<strong>爱德华·雅特利亚斯</strong>联手，击败渗透龙门的乌萨斯大公爵<strong>科西切</strong>。爱德华与魏彦吾胞妹<strong>魏氏</strong>相恋成婚。</td>
+      <td><span class="stage-pill">7-20 / 大地巡旅</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1067年</span></td>
+      <td>出生前1年</td>
+      <td>大炎·龙门</td>
+      <td>大炎天师府与禁军忌惮爱德华的维多利亚王血，向龙门施压。魏彦吾为保龙门被迫设计杀害妹夫爱德华；怀有身孕的魏氏被逼改嫁陈氏。</td>
+      <td><span class="stage-pill">7-20 / JT8-2</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1068.01.09</span></td>
+      <td><strong>0 岁</strong></td>
+      <td>大炎·龙门</td>
+      <td><strong>塔露拉·雅特利亚斯诞生</strong>。数年后，同母异父的妹妹<strong>陈晖洁</strong>出生。在压抑的陈府中，年幼的塔露拉始终护卫着妹妹陈晖洁，将玩偶藏在妹妹床底。</td>
+      <td><span class="stage-pill">JT8-2 / 官方设定</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1077年</span></td>
+      <td><strong>9 岁</strong></td>
+      <td>龙门 → 乌萨斯</td>
+      <td>科西切公爵率飞空艇突袭龙门，以公开爱德华之死内幕威胁魏彦吾，强行掳走9岁的塔露拉。塔露拉在乌萨斯公爵领度过<strong>9年宫廷软禁与洗脑教育</strong>。</td>
+      <td><span class="stage-pill">7-20 / END8-1</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1086年</span></td>
+      <td><strong>18 岁</strong></td>
+      <td>乌萨斯公爵领</td>
+      <td>看穿科西切阴谋的塔露拉<strong>主动将源石碎片刺入左臂成为感染者</strong>，单剑闯入宅邸刺杀养父科西切，却在弑父瞬间被种下<strong>“不死的黑蛇”精神烙印</strong>。</td>
+      <td><span class="stage-pill">R8-1 昨日重现</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1087—1089</span></td>
+      <td>19—21岁</td>
+      <td>乌萨斯北原村落</td>
+      <td>逃亡冻原的塔露拉被老猎人<strong>伊万·伊贾斯拉夫</strong>与艾拉菲亚少女<strong>阿丽娜</strong>收留藏匿三年。1089年冬老伊万被搜捕队杀害，塔露拉怒火焚烧搜捕队，正式与阿丽娜踏上联合感染者的抗争之路。</td>
+      <td><span class="stage-pill">R8-1 / R8-2</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1090—1094</span></td>
+      <td>22—26岁</td>
+      <td>乌萨斯极北冻原</td>
+      <td>收留受虐孤儿<strong>伊诺（梅菲斯特）</strong>与<strong>萨沙（浮士德）</strong>；在冻原与<strong>霜星（叶莲娜）</strong>激战后结为生死姐妹，并成功感召温迪戈老将<strong>博卓卡斯替（爱国者）</strong>率部加入，<strong>早期整合运动</strong>正式成型。</td>
+      <td><span class="stage-pill">R8-3 至 R8-8</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1095—1096</span></td>
+      <td>27—28岁</td>
+      <td>乌萨斯北方荒原</td>
+      <td><strong>三重悲剧崩塌</strong>：① 挚友<strong>阿丽娜</strong>被暴徒残忍虐杀（R8-9）；② <strong>乌萨斯内卫</strong>围剿并当众揭穿其“科西切继承人”身份（R8-11）；③ <strong>北方粮仓惨案</strong>中感染者村民虐杀恩人老农夫妇，塔露拉绝望焚村，<strong>触发黑蛇夺舍契约</strong>（JT8-1）。</td>
+      <td><span class="stage-pill">R8-9 / R8-11 / JT8-1</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1096.12.23—<br>1097.01.06</span></td>
+      <td>28—29岁</td>
+      <td>切尔诺伯格 → 龙门</td>
+      <td><strong>切尔诺伯格—龙门事变（主线第0—8章）</strong>：黑蛇主导的塔露拉发动切城暴动，借刀剪除霜星、浮士德与爱国者，企图驱使切城核心撞击龙门挑起乌炎国战。1097年1月6日，<strong>陈与阿米娅双剑合璧唤醒塔露拉</strong>，击败黑蛇并将其收押至罗德岛。</td>
+      <td><span class="stage-pill">主线 Ep.00—Ep.08<br>JT8-2 / JT8-3</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1097年秋—<br>1098年5月</span></td>
+      <td>29—30岁</td>
+      <td>罗德岛 → 乌萨斯北原</td>
+      <td><strong>越狱与破除心魔</strong>：被“九”率领的<strong>新整合运动</strong>从罗德岛劫狱带走（9-19）；北上乌萨斯移动学院，直面并亲手击败黑蛇次级传人<strong>科谢尔娜</strong>，誓言将黑蛇彻底抹除（10-19）。</td>
+      <td><span class="stage-pill">9-19 / 9-21 / 10-19</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1098年秋—冬</span></td>
+      <td>30 岁</td>
+      <td>维多利亚·伦蒂尼姆</td>
+      <td><strong>红龙双生之战</strong>：随新整合运动踏上生父故土维多利亚拯救感染者，在《13-22》与深池领袖<strong>爱布拉娜（死芒）</strong>展开橙红生命之火与幽紫亡灵之火的宿命对决。</td>
+      <td><span class="stage-pill">12-21 / 13-22 / 14-22</span></td>
+    </tr>
+    <tr>
+      <td><span class="year-pill">1100年+</span></td>
+      <td>32 岁+</td>
+      <td>乌萨斯边境 → 极北</td>
+      <td><strong>麦田新生与再赴北原</strong>：在乌萨斯边境定居点脱下战袍与感染者共同耕种麦田（EG-7）；随后因科谢尔娜在极北挑起哗变，塔露拉带着成熟坚定的信念重返乌萨斯冻原（第17章《离解复合》）。</td>
+      <td><span class="stage-pill">Ep.16 EG-7<br>Ep.17 离解复合</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="dossier-box avoid-break">
+  <div class="dossier-box-title">◆ 时间线关键叙事规律解读：为什么第八章要用“R8（过去）+ M8（现在）”双线交织？</div>
+  <p style="margin-bottom:0;">
+    在《明日方舟》第八章中，编剧刻意将 <strong>1086—1096年的冻原回忆（R8支线）</strong> 与 <strong>1097年1月6日的切城核心塔决战（M8支线）</strong> 交替推进，并在<strong>《JT8-1 燃烧的身躯》</strong>实现双线合流。这种结构让玩家在看到切城暴君塔露拉冷酷无情的同时，同步体验她当年如何满怀赤诚地创立整合运动、又如何在阿丽娜之死与粮仓惨案中被现实一点点碾碎。唯有理解了 R8 的漫长寒冬，才能读懂 JT8-3 中陈与阿米娅那一剑为何不是“消灭反派”，而是“唤醒迷途的理想者”。
+  </p>
+</div>
+
+<!-- ==================== CHAPTER 5: COMPLETE IN-GAME STORY WALKTHROUGH ==================== -->
+<div class="page-break"></div>
+<div class="chapter-banner">
+  <div class="chapter-banner-left">
+    <div class="ch-tag">SECTION 05 // COMPLETE IN-GAME CHRONICLE &amp; VERBATIM SCRIPT ANALYSIS</div>
+    <h2 class="ch-title">第五章：游戏剧情完整经历全纪实——从冻原微光、切城烈焰到麦田新生</h2>
+  </div>
+  <div class="chapter-banner-right">
+    COVERED STAGES: R8-1 TO EP.17<br>ERA: TERRA YEAR 1087 — 1100+
+  </div>
+</div>
+
+<div class="sub-header">
+  <span>【第一阶段】冻原微光与早期整合运动的乌托邦（1087—1094）</span>
+  <span class="stage-ref">对应关卡：R8-1《昨日重现》至 R8-8《人心所向》</span>
+</div>
+
+<p>
+  1086年刺杀养父科西切后，年仅18岁的塔露拉逃入乌萨斯北方荒原。在偏远村落里，心地善良的非感染者老猎人<strong>伊万·伊贾斯拉夫（老伊万）</strong>与艾拉菲亚少女<strong>阿丽娜</strong>冒着被帝国连坐处死的危险，将她藏在自家地窖中整整三年。然而 <strong>1089年冬（《R8-1》）</strong>，乌萨斯纠察队追踪而至，老伊万为替塔露拉争取逃跑时间被活活殴打致死。老伊万的死点燃了塔露拉胸中的正义之火，她拔剑歼灭搜捕队，在墓前立誓要为感染者建立生存之地；阿丽娜也放下教鞭，成为她最坚定的同行者。
+</p>
+
+<div class="grid-2 avoid-break">
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_talulah_alina.png" alt="塔露拉依偎在阿丽娜肩头">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_8_4]：树影下的依靠（R8-2）</strong><br>
+      疲惫的塔露拉依偎在阿丽娜肩头。阿丽娜是唯一能看穿她坚强外表下的孤独、让她卸下心防流露脆弱的灵魂知己。
+    </div>
+  </div>
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_convincing_patriot.png" alt="塔露拉感召霜星与爱国者">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_8_3]：冻原结盟（R8-5）</strong><br>
+      塔露拉在风雪激战后，以赤诚理想与不屈剑意打动“白兔”霜星与传奇温迪戈老将“爱国者”博卓卡斯替。
+    </div>
+  </div>
+</div>
+
+<div class="cg-hero">
+  <img src="./assets/cg_good_old_reunion.png" alt="早期整合运动篝火相聚">
+  <div class="cg-caption">
+    <strong>▲ 官方剧情 CG [Avg_8_21]：黄金时代的篝火（R8-8《人心所向》）</strong><br>
+    1090—1094年间，塔露拉、霜星、阿丽娜、爱国者、浮士德（萨沙）与梅菲斯特（伊诺）围坐在北原营地的篝火旁。那是早期整合运动最纯粹、最温暖的理想主义岁月。
+  </div>
+</div>
+
+<div class="script-quote">
+  <span class="speaker">博卓卡斯替（爱国者）：</span>“塔露拉，你有做领袖的器量。但你要记住，我们整合运动不是土匪，更不是复仇的野兽。如果你哪一天背叛了今天向感染者许下的诺言，我博卓卡斯替的戟，第一个刺穿你的胸膛。”<br>
+  <span class="speaker">塔露拉：</span>“我以性命起誓，博卓卡斯替先生。若我有朝一日偏离此道，不必劳烦您的长戟，我自己的火焰就会先一步将我焚作灰烬。”
+  <span class="cite-tag">—— 主线第八章《R8-5》爱国者与塔露拉结盟时的誓言</span>
+</div>
+
+<div class="sub-header">
+  <span>【第二阶段】信仰崩塌与“怒号光明”的坠落（1095—1096）</span>
+  <span class="stage-ref">对应关卡：R8-9 / R8-11 / JT8-1《燃烧的身躯》</span>
+</div>
+
+<p>
+  <strong>第一重重击：阿丽娜之死（《R8-9》）。</strong>在一场掩护感染者撤离的行动后，前去联络周边村落的阿丽娜，被几个贪图赏金与宣泄私愤的当地暴徒残忍绑架并虐杀。当塔露拉顺着血迹在雪林中找到阿丽娜时，阿丽娜已经奄奄一息。
+</p>
+
+<div class="grid-2 avoid-break">
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_alina_death.png" alt="雪地里死去的阿丽娜">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_8_7_2]：雪原血迹（R8-9）</strong><br>
+      倒在血泊中的阿丽娜用最后一口气拉住塔露拉的手，劝她“不要为了复仇而恨，不要让仇恨变成你的火”。
+    </div>
+  </div>
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_flames_of_sorrow.png" alt="塔露拉抱起阿丽娜遗体">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_8_7_3]：悲恸烈焰（R8-9）</strong><br>
+      塔露拉在漫天风雪中抱起阿丽娜冰冷的遗体。唯一能拉住她缰绳的灵魂知己离世，使她的精神世界失去了最后的平衡支点。
+    </div>
+  </div>
+</div>
+
+<div class="script-quote">
+  <span class="speaker">阿丽娜：</span>“塔露拉……别哭。看着我……不要去报复他们，不要让仇恨变成你的火……你要像冰川一样，哪怕被太阳融化，冬天也还会再来……”<br>
+  <span class="speaker">塔露拉（独白）：</span>“阿丽娜死了。那个唯一会在我发疯时拉住我的手、唯一知道我有多软弱的阿丽娜，像雪花一样化在了泥血里。我按她说的没有去屠杀那个村子……可我胸口那团火，再也没有人能帮我按住了。”
+  <span class="cite-tag">—— 主线第八章《R8-9》阿丽娜临终遗言与塔露拉独白</span>
+</div>
+
+<p>
+  <strong>第二重重击：内卫围剿与身世曝光（《R8-11》）。</strong>乌萨斯帝国最高战力<strong>“皇帝的利刃（内卫）”</strong>对营地发动毁灭性突袭，并在战场上当众高声揭穿塔露拉：<em>“科西切公爵养育了九年的继承人、高高在上的贵族千金，居然在这里扮演感染者的救世主？”</em>这句诛心之言瞬间在伤亡惨重的营地中埋下了猜忌与恐惧的裂痕。
+</p>
+
+<p>
+  <strong>第三重重击（终极临界点）：北方农庄“粮仓惨案”（《JT8-1 燃烧的身躯》）。</strong>塔露拉将一批感染者托付给北方农庄一对善良的非感染者老农夫妇藏匿。然而当她赶回接应时，却看到被她拼死保护的感染者们，<strong>仅仅因为怀疑老夫妇藏有私粮、担心老夫妇日后告密，竟用农具残忍虐杀了这对救命恩人！</strong>
+</p>
+
+<div class="cg-hero">
+  <img src="./assets/cg_what_have_i_done.png" alt="粮仓惨案后火海中的塔露拉">
+  <div class="cg-caption">
+    <strong>▲ 官方剧情 CG [Avg_8_11]：粮仓惨案与坠落深渊（JT8-1《燃烧的身躯》）</strong><br>
+    目睹救命恩人老农夫妇被感染者残忍杀害，塔露拉心中的理想主义防线彻底崩溃，失控释放滔天烈焰焚毁了整座村庄。就在她因仇恨否定人性的这一刻，“不死的黑蛇”全面接管了她的躯体。
+  </div>
+</div>
+
+<div class="script-quote">
+  <span class="speaker">塔露拉：</span>“老伯和老婆婆为了藏你们，连命都押上了……而你们为了几袋发霉的麦子，用镰刀砍死了救命恩人？！这就是我赌上一切去保护的人吗？！”<br>
+  <span class="speaker">“不死的黑蛇”：</span>“看啊，苦难不会让卑劣者变得高尚，他们本质上都是自私贪婪的野兽。烧光他们吧，唯有更高维度的暴政与毁灭，才能重塑这片腐烂的大地！”
+  <span class="cite-tag">—— 主线第八章《JT8-1》粮仓惨案现场，塔露拉失控焚村与黑蛇夺舍瞬间</span>
+</div>
+
+<div class="sub-header">
+  <span>【第三阶段】切尔诺伯格—龙门事变与双剑斩黑蛇（1096.12—1097.01）</span>
+  <span class="stage-ref">对应关卡：主线第0—8章 / JT8-2 / JT8-3 / END8-1</span>
+</div>
+
+<p>
+  被“不死的黑蛇”接管后的塔露拉，内里已彻底化为科西切实现乌萨斯军国主义扩张的冷酷棋手。黑蛇在 <strong>1096年12月23日</strong> 悍然发动<strong>切尔诺伯格事变</strong>，放任梅菲斯特与暴徒虐杀平民；随后故意将整合运动主力分割包围，借龙门近卫局与罗德岛之手，先后逼死了察觉异常的<strong>霜星（第6章）</strong>、<strong>浮士德（第6章）</strong>以及誓死不退的<strong>爱国者（第7章）</strong>。<strong>1097年1月6日（第8章《怒号光明》）</strong>，黑蛇启动切尔诺伯格核心城引擎，企图全速撞毁大炎边境重镇龙门，挑起乌萨斯与大炎的全面国战！
+</p>
+
+<div class="grid-2 avoid-break">
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_talulah_seat.png" alt="王座上的暴君塔露拉">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Item_tll]：高踞王座的切城暴君</strong><br>
+      眼神冰冷孤傲的“塔露拉”，此时身体主导权已落入科西切（不死的黑蛇）之手，整合运动沦为暴虐的战争机器。
+    </div>
+  </div>
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_talulah_attacks.png" alt="切尔诺伯格释放日珥烈焰">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_11_1]：切城焚天烈焰（主线第1章）</strong><br>
+      1096年12月23日，塔露拉在切尔诺伯格废墟上释放毁灭性的极高温日珥源石技艺，迫使罗德岛付出惨重代价撤离。
+    </div>
+  </div>
+</div>
+
+<div class="grid-2 avoid-break">
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_black_snake_unleashed.png" alt="不死的黑蛇显形">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_8_10]：黑蛇真身显形（JT8-2）</strong><br>
+      在切城核心控制塔内，面对陈晖洁与阿米娅的质问，塔露拉背后浮现出科西切（不死的黑蛇）的巨大魔影。
+    </div>
+  </div>
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_chen_confronts.png" alt="陈拔出赤霄直面塔露拉">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_8_40]：姐妹拔剑相向（JT8-2）</strong><br>
+      陈晖洁手握绝影赤霄直指被黑蛇支配的姐姐塔露拉，誓要斩断困住姐姐二十年的沉重宿命。
+    </div>
+  </div>
+</div>
+
+<p>
+  在切城核心控制塔顶端（《JT8-2》《JT8-3》），<strong>陈晖洁</strong>与领悟了萨卡兹魔王传承的<strong>阿米娅（近卫形态·影霄）</strong>联手迎战被黑蛇完全附体的塔露拉。在激烈交锋中，阿米娅通过魔王的共情能力刺入塔露拉的精神世界，看到了那个蜷缩在粮仓大火记忆中痛苦自责的真实塔露拉，并握住她的手向她喊话：<em>“塔露拉，不要逃避！正因为你犯下了无法弥补的罪孽，你才更不能把身体让给科西切！”</em>
+</p>
+
+<div class="cg-hero">
+  <img src="./assets/cg_crimson_shadow.png" alt="阿米娅与陈双剑合璧">
+  <div class="cg-caption">
+    <strong>▲ 官方剧情 CG [Avg_8_37]：赤霄与影霄双剑合璧（JT8-3《怒号光明》最高潮）</strong><br>
+    阿米娅以源石技艺复制赤霄剑意化为“影霄”，与陈晖洁并肩斩出一剑，正面击碎了“不死的黑蛇”不可一世的护体烈焰！
+  </div>
+</div>
+
+<div class="grid-2 avoid-break">
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_kill_me.png" alt="塔露拉持剑抵住咽喉抵抗黑蛇">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_8_12]：剑抵咽喉的意志决战（JT8-3）</strong><br>
+      败局已定的黑蛇企图操控身体自刎以制造“殉道者神话”，苏醒的塔露拉双手满是鲜血死死握住剑锋，夺回身体控制权！
+    </div>
+  </div>
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_elder_sister.png" alt="苏醒的塔露拉对陈说好久不见">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_8_14_2]：跨越二十年的“好久不见”（JT8-3）</strong><br>
+      彻底将黑蛇锁入意识铁笼后的塔露拉褪去戾气，向泪流满面的妹妹陈晖洁露出温柔而愧疚的微笑。
+    </div>
+  </div>
+</div>
+
+<div class="script-quote">
+  <span class="speaker">塔露拉（双手满是鲜血死死按住刺向自己咽喉的剑锋）：</span>“滚回你的阴影里去，科西切！你想让我现在死在晖洁剑下，好让我成为感染者永远仇恨大炎的殉道烈士？做梦！这些血债是我欠下的，阿丽娜、博卓卡斯替先生、叶莲娜、还有那些死在切尔诺伯格的无辜者……哪怕要下地狱，我也必须亲眼看着自己赎清这一切！”<br>
+  <span class="speaker">塔露拉（转向陈晖洁，轻声说）：</span>“……好久不见，晖洁。你长高了。”
+  <span class="cite-tag">—— 主线第八章《JT8-3》塔露拉夺回身体控制权、击退黑蛇精神寄生时的核心台词</span>
+</div>
+
+<div class="sub-header">
+  <span>【第四阶段】罗德岛囚室、越狱与斩断黑蛇心魔（1097—1098.05）</span>
+  <span class="stage-ref">对应关卡：END8-1 / 9-19 / 9-21 / 10-19</span>
+</div>
+
+<div class="grid-2 avoid-break">
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_imprisoned.png" alt="被监禁在罗德岛的塔露拉">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [Avg_8_19]：罗德岛秘密囚室（END8-1）</strong><br>
+      作为切城事变首犯被收押于罗德岛的塔露拉，在囚室中平静地与凯尔希探讨乌萨斯帝国与黑蛇的本质。
+    </div>
+  </div>
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_carries_on.png" alt="戴着枷锁在荒原燃起篝火的塔露拉">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [21_I13]：荒原枷锁与不灭篝火（9-21）</strong><br>
+      被“九”劫狱带出罗德岛后，手戴沉重镣铐的塔露拉在寒夜荒原中再次为同伴燃起温暖的篝火。
+    </div>
+  </div>
+</div>
+
+<p>
+  切尔诺伯格停机后，塔露拉被秘密羁押在罗德岛本舰（《END8-1》）。<strong>1097年秋（第九章 9-19 / 9-21）</strong>，由前近卫局警官<strong>“九（Nine）”</strong>与<strong>Guard</strong>等人重组的<strong>“新整合运动”</strong>突袭罗德岛将她劫走。九冷峻地向她宣告：<em>“你不配安稳地坐在罗德岛的牢房里等死。你要戴着镣铐跟我们走遍这片大地，亲眼看看被你害死的同伴，直到我们找到审判你的方式！”</em><strong>1098年5月（第十章《10-19》）</strong>，塔露拉主动带领九等人北上潜入乌萨斯移动学院，正面击败科西切培养的<strong>次级精神容器科谢尔娜（化名柳德米拉）</strong>！
+</p>
+
+<div class="script-quote">
+  <span class="speaker">科谢尔娜（黑蛇次级传人）：</span>“塔露拉，你我体内流淌着同一个伟大的意志。你在粮仓里放火的时候，明明已经承认了人类的卑劣，为什么要违背本心去扮演一个软弱的赎罪者？”<br>
+  <span class="speaker">塔露拉：</span>“那不是我的本心，那是我的懦弱！当时我因为承受不住背叛的痛苦，才躲进了科西切的歪理邪说里逃避现实。听好了，无论是躲在我脑子里的你，还是站在这里的你，我都会亲手把‘黑蛇’从这片大地上彻底抹去！”
+  <span class="cite-tag">—— 主线第十章《10-19》塔露拉正面击败黑蛇次级传人科谢尔娜时的宣言</span>
+</div>
+
+<div class="sub-header">
+  <span>【第五阶段】维多利亚风云与德拉科双生镜像之战（1098秋—冬）</span>
+  <span class="stage-ref">对应关卡：12-21 / 13-22《双龙》/ 14-22</span>
+</div>
+
+<p>
+  1098年下半年，为调查感染者跨国失踪事件，塔露拉随新整合运动踏上生父故土——<strong>维多利亚首都伦蒂尼姆</strong>（第12至14章），并在<strong>《13-22》</strong>迎来了与另一位德拉科（红龙）王室后裔——<strong>“深池”最高领袖、死芒·爱布拉娜（Eblana）</strong>的宿命交锋。
+</p>
+<p>
+  国外剧情评论界普遍将《13-22》视为塔露拉角色弧光真正圆满的标志：<strong>爱布拉娜正是“如果塔露拉没有迷途知返、彻底拥抱王权与冷酷功利主义后会变成什么样”的完美镜像（Narrative Foil）</strong>。两人同样拥有德拉科王血、同样领导着受压迫群体，但她们对“火焰”与“追随者生命”的理解截然相反：
+</p>
+
+<div class="cg-hero">
+  <img src="./assets/cg_dragons_wrath.png" alt="塔露拉与爱布拉娜双龙对决">
+  <div class="cg-caption">
+    <strong>▲ 官方剧情 CG [43_i03]：红龙双生之战（主线第13章 13-22《双龙》）</strong><br>
+    左侧塔露拉挥出<strong>橙红生命之火</strong>（温暖、锻造、守护生者），右侧爱布拉娜掀起<strong>幽紫亡灵之火</strong>（冰冷、役使死尸）。两代德拉科王血在伦蒂尼姆展开理念与武力的巅峰碰撞。
+  </div>
+</div>
+
+<div class="script-quote">
+  <span class="speaker">爱布拉娜（死芒）：</span>“同为德拉科，你为何要将王血的力量束缚在庸碌者的道德枷锁里？哪怕他们化作灰烬，只要我的紫火能驱动他们的尸骸继续前进，他们的死就有了价值。”<br>
+  <span class="speaker">塔露拉：</span>“我曾经也像你一样傲慢地俯视过他们，以为只要结果正确，牺牲谁都可以——那是我一生最大的耻辱！火焰不该用来驱使死人，爱布拉娜！哪怕只有一瞬间的微光，活着的人也必须为了自己而活！”
+  <span class="cite-tag">—— 主线第十三章《13-22》塔露拉的橙红生命之火与爱布拉娜的幽紫死灵之火正面交锋</span>
+</div>
+
+<div class="sub-header">
+  <span>【第六阶段】麦田里的新生与重返极北冻原（1100+）</span>
+  <span class="stage-ref">对应关卡：第16章《反常光谱》EG-7 / 第17章《离解复合》</span>
+</div>
+
+<div class="grid-2 avoid-break">
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_new_dawn.png" alt="塔露拉与九在麦田劳作">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [66_i19]：麦田里的新生（第16章 EG-7）</strong><br>
+      泰拉历1100年左右，脱去战袍的塔露拉与九在乌萨斯边境定居点的金黄麦田中挥汗收割，笑容平静而真实。
+    </div>
+  </div>
+  <div class="cg-card" style="margin-bottom:0;">
+    <img src="./assets/cg_ep17_koshelna.png" alt="第17章科谢尔娜在极北煽动哗变">
+    <div class="cg-caption">
+      <strong>▲ 官方剧情 CG [73_i09]：极北暗流再起（第17章《离解复合》）</strong><br>
+      黑蛇传人科谢尔娜在乌萨斯极北再度煽动意识形态狂热，促使塔露拉换上北原行装，重返冻原彻底了结宿命。
+    </div>
+  </div>
+</div>
+
+<p>
+  伦蒂尼姆战役结束后，塔露拉随新整合运动回到乌萨斯边境定居点。在<strong>主线第十六章《反常光谱》（关卡 EG-7）</strong>中，她脱下战甲，与“九”及感染者农夫们一起在麦田里收割庄稼——<strong>这一幕与当年《JT8-1》烧毁北方粮仓形成了完美闭环</strong>：当年她因几袋麦子与人性的背叛而绝望屠村；如今她亲手在泥土里种出粮食，从高高在上的“救世主”蜕变为接纳人性平凡的普通劳动者。而在最新的<strong>主线第十七章《离解复合》</strong>中，面对<strong>科谢尔娜</strong>在乌萨斯极北煽动的哗变，换上全新北原猎装的塔露拉再次执剑北上，开启了彻底终结“不死的黑蛇”与乌萨斯制度性苦难的新征程。
+</p>
+
+<div class="dossier-box avoid-break" style="margin-top:12px; background:#141720; color:#e8e2d5; border:1.5px solid #c9a45c;">
+  <div style="color:#e6c687; font-weight:bold; font-size:11pt; margin-bottom:6px;">
+    ◆ 考据结语：为什么塔露拉是《明日方舟》塑造最成功的悲剧英雄之一？
+  </div>
+  <p style="font-size:9.8pt; color:#dcd5c7; line-height:1.68; margin-bottom:8px;">
+    纵观塔露拉从 1068 至 1100+ 年的人生轨迹，鹰角网络在她身上探讨了一个超越善恶二元论的深刻命题：<strong>当一个怀抱纯粹善意的理想主义者，面对结构性的帝国暴政与受压迫者自身的人性劣根性时，该如何避免自己也变成恶龙？</strong>年轻的塔露拉曾以为靠一己之力的怒火就能烧尽不公，结果在阿丽娜之死与粮仓惨案的绝望中输给了内心的“黑蛇”；而历经双剑唤醒、伦蒂尼姆双龙之战与麦田耕作后的塔露拉终于明白：<strong>真正的救赎不在于以神明的姿态替弱者包办一切，也不在于因弱者的卑劣而毁灭世界，而在于认清大地的残酷与人性的不完美之后，依然选择扎根泥土、点燃那簇不灭的篝火。</strong>
+  </p>
+  <div style="font-size:8.5pt; color:#a8a296; border-top:1px solid rgba(201,164,92,0.35); padding-top:6px; line-height:1.5;">
+    <strong>【核心考据资料索引】</strong>
+    1. 官方主线剧本：第7章(7-20)、第8章《怒号光明》(R8-1~R8-11, M8-1~M8-8, JT8-1~JT8-3, END8-1)、第9章(9-19, 9-21)、第10章(10-19)、第12—14章(12-21, 13-22, 14-22)、第16章(EG-7)、第17章《离解复合》。
+    2. 官方设定集：《明日方舟官方世界观设定集：大地巡旅》(Terra: A Journey) &amp; 《罗德岛切尔诺伯格—龙门事变调查报告》｜图像源：PRTS Wiki / ArknightsGameData。
+  </div>
+</div>
+
+<div class="section-footer">
+  <span>TERRA: A JOURNEY // TALULAH ARTORIUS COMPLETE LORE DOSSIER</span>
+  <span>END OF ARCHIVE // FILE NO. RI-TLL-1068-1100</span>
+</div>
+</div>
+</body>
+</html>
